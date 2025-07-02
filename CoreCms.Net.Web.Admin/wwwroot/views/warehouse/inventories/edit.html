@@ -1,0 +1,67 @@
+<script type="text/html" template lay-done="layui.data.sendParams(d);">
+    <div class="layui-form coreshop-form layui-form-pane" lay-filter="LAY-app-inventories-editForm" id="LAY-app-inventories-editForm">
+	    <input type="hidden" name="InvID"  value="{{d.params.data.InvID || '' }}" />
+
+	    <div class="layui-form-item">
+            <label for="WarehouseID" class="layui-form-label  layui-form-required">仓库</label>
+            <div class="layui-input-block">
+                <input name="WarehouseID"   lay-verType="tips" lay-verify="required" class="layui-input" placeholder="请输入仓库ID" lay-reqText="请输入仓库ID"  value="{{d.params.data.warehouseID || '' }}" />
+            </div>
+        </div>
+	    
+	    <div class="layui-form-item">
+            <label for="SKU" class="layui-form-label  layui-form-required">SKU</label>
+            <div class="layui-input-block">
+                <input name="SKU"   lay-verType="tips" lay-verify="required" class="layui-input" placeholder="请输入SKU" lay-reqText="请输入SKU"  value="{{d.params.data.sku || '' }}" />
+            </div>
+        </div>
+	    
+	    <div class="layui-form-item">
+            <label for="Stocks" class="layui-form-label  layui-form-required">货架库存</label>
+            <div class="layui-input-block">
+                <input  type="number" min="0" max="999999" name="Stocks"   lay-verType="tips" lay-verify="required|number" class="layui-input" value="{{d.params.data.stocks || '' }}" placeholder="请输入货架库存" lay-reqText="请输入货架库存并为数字"  />
+            </div>
+        </div>
+	    
+	    <div class="layui-form-item">
+            <label for="QtyAllocation" class="layui-form-label  layui-form">占用库存</label>
+            <div class="layui-input-block">
+                <input  type="number" min="0" max="999999" name="QtyAllocation"   lay-verType="tips" lay-verify="number" class="layui-input" value="{{d.params.data.qtyAllocation || '' }}" placeholder="请输入占用库存" lay-reqText="请输入占用库存并为数字"  />
+            </div>
+        </div>
+	    
+	    <div class="layui-form-item">
+            <label for="QtyRemain" class="layui-form-label  layui-form-required">可用库存</label>
+            <div class="layui-input-block">
+                <input  type="number" min="0" max="999999" name="QtyRemain"   lay-verType="tips" lay-verify="required|number" class="layui-input" value="{{d.params.data.qtyRemain || '' }}" placeholder="请输入可用库存" lay-reqText="请输入可用库存并为数字"  />
+            </div>
+        </div>
+	    
+        <div class="layui-form-item text-right core-hidden">
+            <input type="button" class="layui-btn" lay-submit lay-filter="LAY-app-inventories-editForm-submit" id="LAY-app-inventories-editForm-submit" value="确认编辑">
+        </div>
+    </div>
+</script>
+<script>
+    var debug= layui.setter.debug;
+    layui.data.sendParams = function (d) {
+        //开启调试情况下获取接口赋值数据
+        if (debug) { console.log(d.params.data); }
+        layui.use(['admin', 'form', 'laydate', 'upload', 'coreHelper', 'cropperImg'],
+        function () {
+            var $ = layui.$
+                , form = layui.form
+                , admin = layui.admin
+                , laydate = layui.laydate
+                , upload = layui.upload
+                , cropperImg = layui.cropperImg
+                , coreHelper = layui.coreHelper;
+        
+            form.verify({
+                
+            });
+            //重载form
+            form.render(null, 'LAY-app-inventories-editForm');
+        })
+    };
+</script>

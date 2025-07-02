@@ -1,0 +1,68 @@
+﻿
+using System;
+using System.Collections.Generic;
+using System.Net;
+using System.Text;
+using System.Threading.Tasks;
+using CoreCms.Net.IServices;
+using CoreCms.Net.Loging;
+using CoreCms.Net.Model.Entities;
+using CoreCms.Net.Model.ViewModels.UI;
+using Microsoft.AspNetCore.Http;
+using Microsoft.Extensions.Logging;
+using Microsoft.Net.Http.Headers;
+using Newtonsoft.Json;
+
+namespace CoreCms.Net.Middlewares
+{
+    /// <summary>
+    /// 异常错误统一返回记录
+    /// </summary>
+    public class ExceptionHandlerMiddForClent
+    {
+        private readonly RequestDelegate _next;
+
+
+        public ExceptionHandlerMiddForClent(RequestDelegate next)
+        {
+            _next = next;
+        }
+
+        public async Task Invoke(HttpContext context)
+        {
+            try
+            {
+                await _next(context);
+            }
+            catch (Exception ex)
+            {
+                await HandleExceptionAsync(context, ex);
+            }
+        }
+
+        private async Task HandleExceptionAsync(HttpContext context, Exception ex)
+        {
+            if (ex == null) return;
+
+            NLogUtil.WriteAll(NLog.LogLevel.Error, LogType.ApiRequest, "全局捕获异常", "全局捕获异常", new Exception("全局捕获异常", ex));
+
+            await WriteExceptionAsync(context, ex).ConfigureAwait(false);
+        }
+
+        private static async Task WriteExceptionAsync(HttpContext context, Exception e)
+        {
+            if (e is UnauthorizedAccessException)
+                context.Response.StatusCode = (int)HttpStatusCode.Unauthorized;
+            else if (e is Exception)
+                context.Response.StatusCode = (int)HttpStatusCode.BadRequest;
+
+            context.Response.ContentType = "application/json";
+            var jm = new WebApiCallBack();
+            jm.status = false;
+            jm.code = 500;
+            jm.data = e;
+            jm.msg = "全局数据异常";
+            await context.Response.WriteAsync(JsonConvert.SerializeObject(jm)).ConfigureAwait(false);
+        }
+    }
+}

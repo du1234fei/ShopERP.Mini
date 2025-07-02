@@ -1,0 +1,117 @@
+<script type="text/html" template  lay-done="layui.data.done(d);">
+    <table class="layui-table layui-form" lay-filter="LAY-app-inventories-detailsForm" id="LAY-app-inventories-detailsForm">
+        <colgroup>
+            <col width="100">
+            <col>
+        </colgroup>
+        <tbody>
+		    
+		    <tr>
+                <td>
+                    <label for="InvID">序列</label>
+                </td>
+                <td>
+                    {{ d.params.data.invID || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="WarehouseID">仓库ID</label>
+                </td>
+                <td>
+                    {{ d.params.data.warehouseID || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="SKU">SKU</label>
+                </td>
+                <td>
+                    {{ d.params.data.sku || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="Stocks">货架库存</label>
+                </td>
+                <td>
+                    {{ d.params.data.stocks || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="QtyAllocation">占用库存</label>
+                </td>
+                <td>
+                    {{ d.params.data.qtyAllocation || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="QtyRemain">可用库存</label>
+                </td>
+                <td>
+                    {{ d.params.data.qtyRemain || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="CreatedBy">创建人</label>
+                </td>
+                <td>
+                    {{ d.params.data.createdBy || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="CreatedOn">创建时间</label>
+                </td>
+                <td>
+                    {{ d.params.data.createdOn || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="LastUpdatedBy">更新人</label>
+                </td>
+                <td>
+                    {{ d.params.data.lastUpdatedBy || '' }}
+                </td>
+            </tr>
+		    
+		    <tr>
+                <td>
+                    <label for="LastUpdatedOn">更新时间</label>
+                </td>
+                <td>
+                    {{ d.params.data.lastUpdatedOn || '' }}
+                </td>
+            </tr>
+		    
+        </tbody>
+    </table>
+</script>
+<script>
+    var debug= layui.setter.debug;
+    layui.data.done = function (d) {
+        //开启调试情况下获取接口赋值数据
+        if (debug) { console.log(d.params.data); }
+
+        layui.use(['admin', 'form', 'coreHelper'], function () {
+            var $ = layui.$
+                , setter = layui.setter
+                , admin = layui.admin
+                , coreHelper = layui.coreHelper
+                , form = layui.form;
+            form.render(null, 'LAY-app-inventories-detailsForm');
+        });
+    };
+</script>

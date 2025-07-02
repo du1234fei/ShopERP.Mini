@@ -1,0 +1,101 @@
+<script type="text/html" template lay-done="layui.data.done(d);">
+<div class="layui-form coreshop-form layui-form-pane" lay-filter="LAY-app-inventories-createForm" id="LAY-app-inventories-createForm">
+	
+	<div class="layui-form-item">
+        <label for="InvID" class="layui-form-label  layui-form-required">序列</label>
+        <div class="layui-input-block">
+            <input  type="number" min="0" max="999999" name="InvID"   lay-verType="tips" lay-verify="required|number" class="layui-input" value="1" placeholder="请输入序列" lay-reqText="请输入序列并为数字"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="WarehouseID" class="layui-form-label  layui-form-required">仓库ID</label>
+        <div class="layui-input-block">
+            <input name="WarehouseID"   lay-verType="tips" lay-verify="required" class="layui-input"  placeholder="请输入仓库ID" lay-reqText="请输入仓库ID"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="SKU" class="layui-form-label  layui-form-required">SKU</label>
+        <div class="layui-input-block">
+            <input name="SKU"   lay-verType="tips" lay-verify="required" class="layui-input"  placeholder="请输入SKU" lay-reqText="请输入SKU"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="Stocks" class="layui-form-label  layui-form-required">货架库存</label>
+        <div class="layui-input-block">
+            <input  type="number" min="0" max="999999" name="Stocks"   lay-verType="tips" lay-verify="required|number" class="layui-input" value="1" placeholder="请输入货架库存" lay-reqText="请输入货架库存并为数字"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="QtyAllocation" class="layui-form-label  layui-form-required">占用库存</label>
+        <div class="layui-input-block">
+            <input  type="number" min="0" max="999999" name="QtyAllocation"   lay-verType="tips" lay-verify="required|number" class="layui-input" value="1" placeholder="请输入占用库存" lay-reqText="请输入占用库存并为数字"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="QtyRemain" class="layui-form-label  layui-form-required">可用库存</label>
+        <div class="layui-input-block">
+            <input  type="number" min="0" max="999999" name="QtyRemain"   lay-verType="tips" lay-verify="required|number" class="layui-input" value="1" placeholder="请输入可用库存" lay-reqText="请输入可用库存并为数字"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="CreatedBy" class="layui-form-label  layui-form-required"></label>
+        <div class="layui-input-block">
+            <input name="CreatedBy"   lay-verType="tips" lay-verify="required" class="layui-input"  placeholder="请输入" lay-reqText="请输入"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="CreatedOn" class="layui-form-label  layui-form-required"></label>
+        <div class="layui-input-block">
+            <input name="CreatedOn"   lay-verType="tips" lay-verify="required" class="layui-input"  placeholder="请输入" lay-reqText="请输入"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="LastUpdatedBy" class="layui-form-label  layui-form-required"></label>
+        <div class="layui-input-block">
+            <input name="LastUpdatedBy"   lay-verType="tips" lay-verify="required" class="layui-input"  placeholder="请输入" lay-reqText="请输入"  />
+        </div>
+    </div>
+	
+	<div class="layui-form-item">
+        <label for="LastUpdatedOn" class="layui-form-label  layui-form-required"></label>
+        <div class="layui-input-block">
+            <input name="LastUpdatedOn"   lay-verType="tips" lay-verify="required" class="layui-input"  placeholder="请输入" lay-reqText="请输入"  />
+        </div>
+    </div>
+	
+      <div class="layui-form-item text-right core-hidden">
+        <input type="button" class="layui-btn" lay-submit lay-filter="LAY-app-inventories-createForm-submit" id="LAY-app-inventories-createForm-submit" value="确认添加">
+    </div>
+</div>
+</script>
+<script>
+    var debug= layui.setter.debug;
+    layui.data.done = function (d) {
+        //开启调试情况下获取接口赋值数据
+        if (debug) { console.log(d.params.data); }
+        layui.use(['admin', 'form', 'laydate', 'upload', 'coreHelper', 'cropperImg'],
+        function () {
+            var $ = layui.$
+                , form = layui.form
+                , admin = layui.admin
+                , laydate = layui.laydate
+                , upload = layui.upload
+                , cropperImg = layui.cropperImg
+                , coreHelper = layui.coreHelper;
+	        
+	        form.verify({
+                
+	        });
+            //重载form
+            form.render(null, 'LAY-app-inventories-createForm');
+        })
+    };
+</script>
