@@ -71,3 +71,15 @@ D:\Code\ShopERP.Portal\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.dll
 D:\Code\ShopERP.Portal\CoreCms.Net.Model\obj\Debug\net8.0\refint\CoreCms.Net.Model.dll
 D:\Code\ShopERP.Portal\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.pdb
 D:\Code\ShopERP.Portal\CoreCms.Net.Model\obj\Debug\net8.0\ref\CoreCms.Net.Model.dll
+D:\Code\Shop.ERP\CoreCms.Net.Model\bin\Debug\net8.0\CoreCms.Net.Model.deps.json
+D:\Code\Shop.ERP\CoreCms.Net.Model\bin\Debug\net8.0\CoreCms.Net.Model.dll
+D:\Code\Shop.ERP\CoreCms.Net.Model\bin\Debug\net8.0\CoreCms.Net.Model.pdb
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.csproj.AssemblyReference.cache
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.AssemblyInfoInputs.cache
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.AssemblyInfo.cs
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.csproj.CoreCompileInputs.cache
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.dll
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\refint\CoreCms.Net.Model.dll
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\CoreCms.Net.Model.pdb
+D:\Code\Shop.ERP\CoreCms.Net.Model\obj\Debug\net8.0\ref\CoreCms.Net.Model.dll

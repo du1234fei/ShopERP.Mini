@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj": {}
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj": {}
   },
   "projects": {
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj": {
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj",
+        "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj",
         "projectName": "CoreCms.Net.Caching",
-        "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj",
+        "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\obj\\",
+        "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -31,11 +31,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
               },
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj"
               }
             }
           }
@@ -107,14 +107,14 @@
         }
       }
     },
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj",
+        "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj",
         "projectName": "CoreCms.Net.Configuration",
-        "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj",
+        "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\obj\\",
+        "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -134,8 +134,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
               }
             }
           }
@@ -207,14 +207,14 @@
         }
       }
     },
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj": {
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj",
+        "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj",
         "projectName": "CoreCms.Net.IServices",
-        "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj",
+        "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\obj\\",
+        "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.IServices\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -234,11 +234,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
               },
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
               }
             }
           }
@@ -302,14 +302,14 @@
         }
       }
     },
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj": {
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj",
+        "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj",
         "projectName": "CoreCms.Net.Loging",
-        "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj",
+        "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\obj\\",
+        "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -329,11 +329,11 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
               },
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj"
               }
             }
           }
@@ -405,14 +405,14 @@
         }
       }
     },
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj",
+        "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj",
         "projectName": "CoreCms.Net.Model",
-        "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj",
+        "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\obj\\",
+        "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -493,14 +493,14 @@
         }
       }
     },
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj": {
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj",
+        "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj",
         "projectName": "CoreCms.Net.RedisMQ",
-        "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj",
+        "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.RedisMQ\\obj\\",
+        "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.RedisMQ\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -520,17 +520,17 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj"
               },
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
               },
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj"
               },
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj"
               }
             }
           }
@@ -606,14 +606,14 @@
         }
       }
     },
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj",
+        "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj",
         "projectName": "CoreCms.Net.Utility",
-        "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj",
+        "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\obj\\",
+        "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -633,8 +633,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
-                "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
+              "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
+                "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
               }
             }
           }

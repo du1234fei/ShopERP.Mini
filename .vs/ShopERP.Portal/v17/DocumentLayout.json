@@ -1,12 +1,69 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Code\\ShopERP.Portal\\",
-  "Documents": [],
+  "WorkspaceRootPath": "D:\\Code\\Shop.ERP\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shop.erp\\corecms.net.web.admin\\wwwroot\\views\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\wwwroot\\views\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shop.erp\\corecms.net.web.admin\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shop.erp\\corecms.net.web.admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\wwwroot\\index.html",
+              "ToolTip": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\wwwroot\\index.html",
+              "RelativeToolTip": "CoreCms.Net.Web.Admin\\wwwroot\\index.html",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-03T01:20:40.728Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
+              "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
+              "ToolTip": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
+              "RelativeToolTip": "CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAwIUAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-03T01:20:15.811Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\Program.cs",
+              "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\Program.cs",
+              "ToolTip": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\Program.cs",
+              "RelativeToolTip": "CoreCms.Net.Web.Admin\\Program.cs",
+              "ViewState": "AgIAACYAAAAAAAAAAAAYwEEAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-03T01:12:39.135Z"
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Cqi8sz2WmKc=",
+  "dgSpecHash": "WC/Q8KMC4I0=",
   "success": true,
-  "projectFilePath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Repository\\CoreCms.Net.Repository.csproj",
+  "projectFilePath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Repository\\CoreCms.Net.Repository.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\autofac\\6.5.0\\autofac.6.5.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\autofac.extensions.dependencyinjection\\8.0.0\\autofac.extensions.dependencyinjection.8.0.0.nupkg.sha512",

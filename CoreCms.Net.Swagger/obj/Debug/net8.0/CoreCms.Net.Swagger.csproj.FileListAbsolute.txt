@@ -71,3 +71,15 @@ D:\Code\ShopERP.Portal\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.
 D:\Code\ShopERP.Portal\CoreCms.Net.Swagger\obj\Debug\net8.0\refint\CoreCms.Net.Swagger.dll
 D:\Code\ShopERP.Portal\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.pdb
 D:\Code\ShopERP.Portal\CoreCms.Net.Swagger\obj\Debug\net8.0\ref\CoreCms.Net.Swagger.dll
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\bin\Debug\net8.0\CoreCms.Net.Swagger.deps.json
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\bin\Debug\net8.0\CoreCms.Net.Swagger.dll
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\bin\Debug\net8.0\CoreCms.Net.Swagger.pdb
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.csproj.AssemblyReference.cache
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.GeneratedMSBuildEditorConfig.editorconfig
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.AssemblyInfoInputs.cache
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.AssemblyInfo.cs
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.csproj.CoreCompileInputs.cache
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.dll
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\refint\CoreCms.Net.Swagger.dll
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\CoreCms.Net.Swagger.pdb
+D:\Code\Shop.ERP\CoreCms.Net.Swagger\obj\Debug\net8.0\ref\CoreCms.Net.Swagger.dll

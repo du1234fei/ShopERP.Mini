@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "MHsy73H/dqA=",
+  "dgSpecHash": "lvRqX5pLBOM=",
   "success": true,
-  "projectFilePath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj",
+  "projectFilePath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\bouncycastle.cryptography\\2.2.1\\bouncycastle.cryptography.2.2.1.nupkg.sha512",

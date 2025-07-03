@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "83GWZ9R3gxY=",
+  "dgSpecHash": "jeHpqepkK/c=",
   "success": true,
-  "projectFilePath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Task\\CoreCms.Net.Task.csproj",
+  "projectFilePath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Task\\CoreCms.Net.Task.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\aliyun.oss.sdk.netcore\\2.13.0\\aliyun.oss.sdk.netcore.2.13.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\autofac\\6.5.0\\autofac.6.5.0.nupkg.sha512",

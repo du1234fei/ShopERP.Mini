@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "PFclfE5CFG8=",
+  "dgSpecHash": "3Jej7uM2cY8=",
   "success": true,
-  "projectFilePath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj",
+  "projectFilePath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",

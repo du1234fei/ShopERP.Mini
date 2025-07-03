@@ -7258,11 +7258,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Repository\\CoreCms.Net.Repository.csproj",
+      "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Repository\\CoreCms.Net.Repository.csproj",
       "projectName": "CoreCms.Net.Repository",
-      "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Repository\\CoreCms.Net.Repository.csproj",
+      "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Repository\\CoreCms.Net.Repository.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Repository\\obj\\",
+      "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Repository\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7282,29 +7282,29 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Auth\\CoreCms.Net.Auth.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Auth\\CoreCms.Net.Auth.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Auth\\CoreCms.Net.Auth.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Auth\\CoreCms.Net.Auth.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.CodeGenerator\\CoreCms.Net.CodeGenerator.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.CodeGenerator\\CoreCms.Net.CodeGenerator.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.CodeGenerator\\CoreCms.Net.CodeGenerator.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.CodeGenerator\\CoreCms.Net.CodeGenerator.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Core\\CoreCms.Net.Core.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Core\\CoreCms.Net.Core.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Core\\CoreCms.Net.Core.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Core\\CoreCms.Net.Core.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IRepository\\CoreCms.Net.IRepository.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IRepository\\CoreCms.Net.IRepository.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.IRepository\\CoreCms.Net.IRepository.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.IRepository\\CoreCms.Net.IRepository.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj"
             }
           }
         }

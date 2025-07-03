@@ -1,50 +1,18 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "D:\\Code\\ShopERP.Portal\\",
+  "WorkspaceRootPath": "D:\\Code\\Shop.ERP\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{57648B11-317A-4FE1-BFDB-1FDEAE5DFFDE}|CoreCms.Net.Services\\CoreCms.Net.Services.csproj|d:\\code\\shoperp.portal\\corecms.net.services\\bill\\corecmsbillpaymentsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57648B11-317A-4FE1-BFDB-1FDEAE5DFFDE}|CoreCms.Net.Services\\CoreCms.Net.Services.csproj|solutionrelative:corecms.net.services\\bill\\corecmsbillpaymentsservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57648B11-317A-4FE1-BFDB-1FDEAE5DFFDE}|CoreCms.Net.Services\\CoreCms.Net.Services.csproj|d:\\code\\shoperp.portal\\corecms.net.services\\bill\\corecmsbillrefundservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57648B11-317A-4FE1-BFDB-1FDEAE5DFFDE}|CoreCms.Net.Services\\CoreCms.Net.Services.csproj|solutionrelative:corecms.net.services\\bill\\corecmsbillrefundservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E024CA5-FCE6-48A7-8209-201FF2D9237E}|CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj|d:\\code\\shoperp.portal\\corecms.net.iservices\\pay\\iofflinepayservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E024CA5-FCE6-48A7-8209-201FF2D9237E}|CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj|solutionrelative:corecms.net.iservices\\pay\\iofflinepayservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{57648B11-317A-4FE1-BFDB-1FDEAE5DFFDE}|CoreCms.Net.Services\\CoreCms.Net.Services.csproj|d:\\code\\shoperp.portal\\corecms.net.services\\system\\sysuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{57648B11-317A-4FE1-BFDB-1FDEAE5DFFDE}|CoreCms.Net.Services\\CoreCms.Net.Services.csproj|solutionrelative:corecms.net.services\\system\\sysuserservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shoperp.portal\\corecms.net.web.admin\\controllers\\com\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\controllers\\com\\logincontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{0E024CA5-FCE6-48A7-8209-201FF2D9237E}|CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj|d:\\code\\shoperp.portal\\corecms.net.iservices\\bill\\icorecmsbillrefundservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{0E024CA5-FCE6-48A7-8209-201FF2D9237E}|CoreCms.Net.IServices\\CoreCms.Net.IServices.csproj|solutionrelative:corecms.net.iservices\\bill\\icorecmsbillrefundservices.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shoperp.portal\\corecms.net.web.admin\\wwwroot\\views\\user\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\wwwroot\\views\\user\\login.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shoperp.portal\\corecms.net.web.admin\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shoperp.portal\\corecms.net.web.admin\\wwwroot\\views\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shop.erp\\corecms.net.web.admin\\wwwroot\\views\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\wwwroot\\views\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shoperp.portal\\corecms.net.web.admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shop.erp\\corecms.net.web.admin\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\wwwroot\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shoperp.portal\\corecms.net.web.admin\\controllers\\com\\toolscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\controllers\\com\\toolscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|d:\\code\\shop.erp\\corecms.net.web.admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}|CoreCms.Net.Web.Admin\\CoreCms.Net.Web.Admin.csproj|solutionrelative:corecms.net.web.admin\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -54,149 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "IOfflinePayServices.cs",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\Pay\\IOfflinePayServices.cs",
-              "RelativeDocumentMoniker": "CoreCms.Net.IServices\\Pay\\IOfflinePayServices.cs",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\Pay\\IOfflinePayServices.cs",
-              "RelativeToolTip": "CoreCms.Net.IServices\\Pay\\IOfflinePayServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:55:20.675Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ICoreCmsBillRefundServices.cs",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\Bill\\ICoreCmsBillRefundServices.cs",
-              "RelativeDocumentMoniker": "CoreCms.Net.IServices\\Bill\\ICoreCmsBillRefundServices.cs",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IServices\\Bill\\ICoreCmsBillRefundServices.cs",
-              "RelativeToolTip": "CoreCms.Net.IServices\\Bill\\ICoreCmsBillRefundServices.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:51:42.474Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "CoreCmsBillRefundServices.cs",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Services\\Bill\\CoreCmsBillRefundServices.cs",
-              "RelativeDocumentMoniker": "CoreCms.Net.Services\\Bill\\CoreCmsBillRefundServices.cs",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Services\\Bill\\CoreCmsBillRefundServices.cs",
-              "RelativeToolTip": "CoreCms.Net.Services\\Bill\\CoreCmsBillRefundServices.cs",
-              "ViewState": "AgIAABUAAAAAAAAAAADgvyoAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:48:51.969Z",
+              "Title": "index.html",
+              "DocumentMoniker": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\wwwroot\\index.html",
+              "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\wwwroot\\index.html",
+              "ToolTip": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\wwwroot\\index.html",
+              "RelativeToolTip": "CoreCms.Net.Web.Admin\\wwwroot\\index.html",
+              "ViewState": "AgIAAA8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
+              "WhenOpened": "2025-07-03T01:20:40.728Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "CoreCmsBillPaymentsServices.cs",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Services\\Bill\\CoreCmsBillPaymentsServices.cs",
-              "RelativeDocumentMoniker": "CoreCms.Net.Services\\Bill\\CoreCmsBillPaymentsServices.cs",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Services\\Bill\\CoreCmsBillPaymentsServices.cs",
-              "RelativeToolTip": "CoreCms.Net.Services\\Bill\\CoreCmsBillPaymentsServices.cs",
-              "ViewState": "AgIAAKsBAAAAAAAAAAApwMEBAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:48:44.489Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
               "Title": "index.html",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
+              "DocumentMoniker": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
               "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
+              "ToolTip": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
               "RelativeToolTip": "CoreCms.Net.Web.Admin\\wwwroot\\views\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAHcAAAAAAAAAAAAAwIUAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-02T10:36:55.242Z",
+              "WhenOpened": "2025-07-03T01:20:15.811Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "index.html",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\wwwroot\\index.html",
-              "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\wwwroot\\index.html",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\wwwroot\\index.html",
-              "RelativeToolTip": "CoreCms.Net.Web.Admin\\wwwroot\\index.html",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAcwCAAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-02T10:36:47.538Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "login.html",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\wwwroot\\views\\user\\login.html",
-              "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\wwwroot\\views\\user\\login.html",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\wwwroot\\views\\user\\login.html",
-              "RelativeToolTip": "CoreCms.Net.Web.Admin\\wwwroot\\views\\user\\login.html",
-              "ViewState": "AgIAAGwAAAAAAAAAAAAAAJEAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2025-07-02T10:36:25.774Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "SysUserServices.cs",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Services\\System\\SysUserServices.cs",
-              "RelativeDocumentMoniker": "CoreCms.Net.Services\\System\\SysUserServices.cs",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Services\\System\\SysUserServices.cs",
-              "RelativeToolTip": "CoreCms.Net.Services\\System\\SysUserServices.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAQwDUAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:23:04.197Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ToolsController.cs",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\Controllers\\Com\\ToolsController.cs",
-              "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\Controllers\\Com\\ToolsController.cs",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\Controllers\\Com\\ToolsController.cs",
-              "RelativeToolTip": "CoreCms.Net.Web.Admin\\Controllers\\Com\\ToolsController.cs",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAowGYAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:21:06.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "LoginController.cs",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\Controllers\\Com\\LoginController.cs",
-              "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\Controllers\\Com\\LoginController.cs",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\Controllers\\Com\\LoginController.cs",
-              "RelativeToolTip": "CoreCms.Net.Web.Admin\\Controllers\\Com\\LoginController.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAAAEYAAAAMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T10:18:14.782Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\Program.cs",
+              "DocumentMoniker": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\Program.cs",
               "RelativeDocumentMoniker": "CoreCms.Net.Web.Admin\\Program.cs",
-              "ToolTip": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Web.Admin\\Program.cs",
+              "ToolTip": "D:\\Code\\Shop.ERP\\CoreCms.Net.Web.Admin\\Program.cs",
               "RelativeToolTip": "CoreCms.Net.Web.Admin\\Program.cs",
-              "ViewState": "AgIAACQAAAAAAAAAAAAAACsAAAAJAAAAAAAAAA==",
+              "ViewState": "AgIAACYAAAAAAAAAAAAYwEEAAAA/AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-07-02T02:07:38.331Z",
+              "WhenOpened": "2025-07-03T01:12:39.135Z",
               "EditorCaption": ""
             }
           ]

@@ -4739,11 +4739,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj",
+      "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj",
       "projectName": "CoreCms.Net.Loging",
-      "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj",
+      "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\obj\\",
+      "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4763,11 +4763,11 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Model\\CoreCms.Net.Model.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Utility\\CoreCms.Net.Utility.csproj"
             }
           }
         }

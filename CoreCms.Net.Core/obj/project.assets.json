@@ -7122,11 +7122,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Core\\CoreCms.Net.Core.csproj",
+      "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Core\\CoreCms.Net.Core.csproj",
       "projectName": "CoreCms.Net.Core",
-      "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Core\\CoreCms.Net.Core.csproj",
+      "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Core\\CoreCms.Net.Core.csproj",
       "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-      "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Core\\obj\\",
+      "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Core\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -7146,23 +7146,23 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Caching\\CoreCms.Net.Caching.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Configuration\\CoreCms.Net.Configuration.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IRepository\\CoreCms.Net.IRepository.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.IRepository\\CoreCms.Net.IRepository.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.IRepository\\CoreCms.Net.IRepository.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.IRepository\\CoreCms.Net.IRepository.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Loging\\CoreCms.Net.Loging.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.RedisMQ\\CoreCms.Net.RedisMQ.csproj"
             },
-            "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj": {
-              "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj"
+            "D:\\Code\\Shop.ERP\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj": {
+              "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "c/Z8tMJC4Dk=",
+  "dgSpecHash": "zYNKWD+NkY8=",
   "success": true,
-  "projectFilePath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Filter\\CoreCms.Net.Filter.csproj",
+  "projectFilePath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Filter\\CoreCms.Net.Filter.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Administrator\\.nuget\\packages\\aliyun.oss.sdk.netcore\\2.13.0\\aliyun.oss.sdk.netcore.2.13.0.nupkg.sha512",
     "C:\\Users\\Administrator\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj": {}
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj": {}
   },
   "projects": {
-    "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj": {
+    "D:\\Code\\Shop.ERP\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj",
+        "projectUniqueName": "D:\\Code\\Shop.ERP\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj",
         "projectName": "CoreCms.Net.Swagger",
-        "projectPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj",
+        "projectPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Swagger\\CoreCms.Net.Swagger.csproj",
         "packagesPath": "C:\\Users\\Administrator\\.nuget\\packages\\",
-        "outputPath": "D:\\Code\\ShopERP.Portal\\CoreCms.Net.Swagger\\obj\\",
+        "outputPath": "D:\\Code\\Shop.ERP\\CoreCms.Net.Swagger\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
