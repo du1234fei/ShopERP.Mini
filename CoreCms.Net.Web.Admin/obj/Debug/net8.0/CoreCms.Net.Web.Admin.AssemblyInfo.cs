@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoreCms.Net.Web.Admin")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+062a26db82b6cc8578f7d4115f8568435f3834f3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae1ed181a78755fc934e2359c9b6ebdd5741e7d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoreCms.Net.Web.Admin")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoreCms.Net.Web.Admin")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

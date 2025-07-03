@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoreCms.Net.Mapping")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cd00f255feea4a4aabf23f9ee6d2beedab4e1a6b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ae1ed181a78755fc934e2359c9b6ebdd5741e7d0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoreCms.Net.Mapping")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoreCms.Net.Mapping")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
