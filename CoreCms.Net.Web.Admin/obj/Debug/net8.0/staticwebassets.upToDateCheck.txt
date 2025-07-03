@@ -243,7 +243,6 @@ wwwroot\static\images\common\image-one-column.png
 wwwroot\static\images\common\image-one-left.png
 wwwroot\static\images\common\image-three-column.png
 wwwroot\static\images\common\login.jpg
-wwwroot\static\images\common\login2.jpg
 wwwroot\static\images\common\logo.png
 wwwroot\static\images\common\logo2.png
 wwwroot\static\images\common\logoMin.png
@@ -251,6 +250,7 @@ wwwroot\static\images\common\model-title.png
 wwwroot\static\images\common\model-title.psd
 wwwroot\static\images\common\one-big.png
 wwwroot\static\images\common\one-small.png
+wwwroot\static\images\common\title.jpg
 wwwroot\static\images\common\two-small.png
 wwwroot\static\images\common\userwx_1.jpg
 wwwroot\static\images\common\userwx_2.jpg

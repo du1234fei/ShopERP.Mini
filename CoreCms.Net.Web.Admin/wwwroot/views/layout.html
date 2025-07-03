@@ -62,10 +62,9 @@
       <script type="text/html" template  lay-type="Post" lay-url="{{ layui.setter.apiUrl }}api/tools/getNavs?v={{ layui.admin.v }}"
               lay-done="layui.element.render('nav', 'layadmin-system-side-menu');layui.data.updateMainBreadcrumb();" id="TPL_layout">
 
-          <div class="layui-logo" lay-href="">
-              <!--<span>{{ layui.setter.name || 'ShopERP系统' }}</span>-->
-              <img src="../static/images/common/coreshop.png" style="height: 50px;width: 220px;" />
-        </div>
+          <div class="layui-logo" lay-href="" style="font-weight:bold;color:white;">
+              <span>{{ layui.setter.name || '电商后台管理系统' }}</span>
+          </div>
 
         <ul class="layui-nav layui-nav-tree coreshop-nav-tree" lay-shrink="all" id="LAY-system-side-menu" lay-filter="layadmin-system-side-menu">
         {{# 
