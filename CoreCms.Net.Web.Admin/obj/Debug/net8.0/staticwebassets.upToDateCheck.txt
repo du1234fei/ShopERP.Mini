@@ -314,12 +314,6 @@ wwwroot\views\content\reports\goods.html
 wwwroot\views\content\reports\goodscollection.html
 wwwroot\views\content\reports\order.html
 wwwroot\views\content\reports\payments.html
-wwwroot\views\content\stock\products\details.html
-wwwroot\views\content\stock\products\index.html
-wwwroot\views\content\stock\stocklog\index.html
-wwwroot\views\content\stock\stocks\create.html
-wwwroot\views\content\stock\stocks\details.html
-wwwroot\views\content\stock\stocks\index.html
 wwwroot\views\distribution\distributor\details.html
 wwwroot\views\distribution\distributor\edit.html
 wwwroot\views\distribution\distributor\index.html
@@ -448,6 +442,12 @@ wwwroot\views\shop\store\clerkedit.html
 wwwroot\views\shop\store\create.html
 wwwroot\views\shop\store\edit.html
 wwwroot\views\shop\store\index.html
+wwwroot\views\stock\products\details.html
+wwwroot\views\stock\products\index.html
+wwwroot\views\stock\stocklog\index.html
+wwwroot\views\stock\stocks\create.html
+wwwroot\views\stock\stocks\details.html
+wwwroot\views\stock\stocks\index.html
 wwwroot\views\system\about.html
 wwwroot\views\system\get.html
 wwwroot\views\system\more.html

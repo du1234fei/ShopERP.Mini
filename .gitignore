@@ -1,15 +1,35 @@
-bin/
-CoreCms.Net.Web.Admin/bin/Debug/net8.0/*
-.vs/ShopERP.Portal/FileContentIndex/0e8d2dbc-bb18-429e-8f84-515463a361bf.vsidx
-.vs/ShopERP.Portal/FileContentIndex/17b72418-c912-4fa6-9d14-f77e4bf458ed.vsidx
-.vs/ShopERP.Portal/FileContentIndex/9d29ec93-5bfa-4198-aaf6-123ca898e6d9.vsidx
-.vs/ShopERP.Portal/FileContentIndex/6471e1db-8ed4-4401-ad50-8449e488de01.vsidx
-.vs/ShopERP.Portal/v17/DocumentLayout.backup.json
-.vs/ShopERP.Portal/v17/.suo
+# 1. 创建/编辑 .gitignore 文件（包含以下内容）
+cat > .gitignore <<EOF
+## VS 编译文件 ##
+[Bb][Ii][Nn]/
+[Oo][Bb][Jj]/
+[Dd][Ee][Bb][Uu][Gg]/
+[Rr][Ee][Ll][Ee][Aa][Ss][Ee]/
+[Xx]64/
+[Xx]86/
+*.user
+*.suo
+*.cache
+*.pdb
+*.exe
+*.dll
+*.ilk
+*.lib
+*.log
+packages/
+
+## 系统文件 ##
+.DS_Store
+Thumbs.db
+EOF
+
+# 2. 强制刷新 Git 索引
+git rm -r --cached .
+git add .
+git commit -m "应用新的.gitignore规则"
 .vs/ShopERP.Portal/v17/DocumentLayout.json
-.vs/ShopERP.Portal/FileContentIndex/3fb66bd5-402e-46e7-bc6e-0e21ee047e62.vsidx
+.vs/ShopERP.Portal/FileContentIndex/ed6a503e-a784-448b-839d-2f173655d14a.vsidx
+.vs/ShopERP.Portal/FileContentIndex/ad21e5c9-cf28-4ef3-a8f0-7d978e4995fd.vsidx
+.vs/ShopERP.Portal/FileContentIndex/74ec1dc6-cc84-46a5-8094-08800fb6e5f4.vsidx
 .vs/ShopERP.Portal/FileContentIndex/5ab8e179-089f-4846-a547-656162c213b7.vsidx
-.vs/ShopERP.Portal/FileContentIndex/c55f28b0-0bc1-4e75-89f4-0c635885dbf1.vsidx
-CoreCms.Net.Web.Admin/wwwroot/static/images/common/title.jpg
-.vs/ShopERP.Portal/DesignTimeBuild/.dtbcache.v2
-.vs/ShopERP.Portal/FileContentIndex/f3309ad0-3494-4f1c-9b25-b51a25aff80e.vsidx
+.vs/ShopERP.Portal/FileContentIndex/6471e1db-8ed4-4401-ad50-8449e488de01.vsidx

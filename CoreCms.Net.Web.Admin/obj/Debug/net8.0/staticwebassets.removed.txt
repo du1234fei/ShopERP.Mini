@@ -1,1 +1,6 @@
-D:\Code\Shop.ERP\CoreCms.Net.Web.Admin\wwwroot\static\images\common\login2.jpg
+D:\Code\Shop.ERP\CoreCms.Net.Web.Admin\wwwroot\views\content\stock\products\details.html
+D:\Code\Shop.ERP\CoreCms.Net.Web.Admin\wwwroot\views\content\stock\products\index.html
+D:\Code\Shop.ERP\CoreCms.Net.Web.Admin\wwwroot\views\content\stock\stocklog\index.html
+D:\Code\Shop.ERP\CoreCms.Net.Web.Admin\wwwroot\views\content\stock\stocks\create.html
+D:\Code\Shop.ERP\CoreCms.Net.Web.Admin\wwwroot\views\content\stock\stocks\details.html
+D:\Code\Shop.ERP\CoreCms.Net.Web.Admin\wwwroot\views\content\stock\stocks\index.html
