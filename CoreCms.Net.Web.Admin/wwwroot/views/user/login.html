@@ -55,7 +55,7 @@
                                 <button type="button" class="btn btn-info w-100" lay-submit lay-filter="LAY-user-login-submit" id="loginSubmit">登录</button>
                             </div>
                             <div class="col-sm-12 mb-2">
-                                <button type="button" class="btn btn-info w-100" lay-submit lay-filter="LAY-user-login-register" id="loginRegister">注册</button>
+                                <button type="button" class="btn btn-info w-100" id="loginRegister">注册</button>
                             </div>
                         </div>
                     </div>
@@ -152,5 +152,14 @@
                 }
             });
         });
+
+
+        //用户注册事件
+        $('#loginRegister').click(function () {
+          
+            layer.msg('这个是注册按钮... ');
+        });
+
+
     });
 </script>
