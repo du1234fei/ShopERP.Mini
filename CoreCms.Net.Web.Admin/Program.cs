@@ -1,4 +1,4 @@
-using Autofac.Extensions.DependencyInjection;
+ï»¿using Autofac.Extensions.DependencyInjection;
 using CoreCms.Net.Loging;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
@@ -32,12 +32,12 @@ using Yitter.IdGenerator;
 namespace CoreCms.Net.Web.Admin
 {
     /// <summary>
-    /// ³ÌĞò¿ªÊ¼Æô¶¯
+    /// ç¨‹åºå¼€å§‹å¯åŠ¨
     /// </summary>
     public class Program
     {
         /// <summary>
-        /// ³ÌĞòµÄÈë¿Ú
+        /// ç¨‹åºçš„å…¥å£
         /// </summary>
         /// <param name="args"></param>
         public static void Main(string[] args)
@@ -46,19 +46,22 @@ namespace CoreCms.Net.Web.Admin
 
             builder.AddServicesToContainer();
             
-            // Ñ©»¨Æ¯ÒÆËã·¨
-            // ´´½¨ IdGeneratorOptions ¶ÔÏó£¬ÇëÔÚ¹¹Ôìº¯ÊıÖĞÊäÈë WorkerId£º
+            // é›ªèŠ±æ¼‚ç§»ç®—æ³•
+            // åˆ›å»º IdGeneratorOptions å¯¹è±¡ï¼Œè¯·åœ¨æ„é€ å‡½æ•°ä¸­è¾“å…¥ WorkerIdï¼š
             var options = new IdGeneratorOptions(1);
 
-            // ±£´æ²ÎÊı£¨±ØĞëµÄ²Ù×÷£¬·ñÔòÒÔÉÏÉèÖÃ¶¼²»ÄÜÉúĞ§£©£º
+            // ä¿å­˜å‚æ•°ï¼ˆå¿…é¡»çš„æ“ä½œï¼Œå¦åˆ™ä»¥ä¸Šè®¾ç½®éƒ½ä¸èƒ½ç”Ÿæ•ˆï¼‰ï¼š
             YitIdHelper.SetIdGenerator(options);
 
-            //AutoFac×¢²á
+            //AutoFacæ³¨å†Œ
             builder.Host.UseServiceProviderFactory(new AutofacServiceProviderFactory());
             builder.Host.ConfigureContainer<ContainerBuilder>(containerBuilder =>
             {
-                //»ñÈ¡ËùÓĞ¿ØÖÆÆ÷ÀàĞÍ²¢Ê¹ÓÃÊôĞÔ×¢Èë
+                //è·å– ControllerBase ç±»å‹çš„å…ƒæ•°æ®ï¼ˆSystem.Type å¯¹è±¡ï¼‰ã€‚
                 var controllerBaseType = typeof(ControllerBase);
+
+                //æ³¨å†Œâ€‹â€‹å½“å‰ç¨‹åºé›†â€‹â€‹ï¼ˆåŒ…å« Program ç±»çš„ç¨‹åºé›†ï¼‰ä¸­çš„æ‰€æœ‰ç±»å‹ã€‚
+                //æ’é™¤ ControllerBase æœ¬èº«ï¼ˆé¿å…æ³¨å†ŒåŸºç±»ï¼‰ã€‚
                 containerBuilder.RegisterAssemblyTypes(typeof(Program).Assembly)
                     .Where(t => controllerBaseType.IsAssignableFrom(t) && t != controllerBaseType)
                     .PropertiesAutowired();
@@ -72,18 +75,18 @@ namespace CoreCms.Net.Web.Admin
 
             try
             {
-                //È·±£NLog.configÖĞÁ¬½Ó×Ö·û´®Óëappsettings.jsonÖĞÍ¬²½
+                //ç¡®ä¿NLog.configä¸­è¿æ¥å­—ç¬¦ä¸²ä¸appsettings.jsonä¸­åŒæ­¥
                 NLogUtil.EnsureNlogConfig("NLog.config");
 
-                //ÆäËûÏîÄ¿Æô¶¯Ê±ĞèÒª×öµÄÊÂÇé
-                NLogUtil.WriteLogFile(NLog.LogLevel.Trace, LogType.ApiRequest, "½Ó¿ÚÆô¶¯", "½Ó¿ÚÆô¶¯³É¹¦");
+                //å…¶ä»–é¡¹ç›®å¯åŠ¨æ—¶éœ€è¦åšçš„äº‹æƒ…
+                NLogUtil.WriteLogFile(NLog.LogLevel.Trace, LogType.ApiRequest, "æ¥å£å¯åŠ¨", "æ¥å£å¯åŠ¨æˆåŠŸ");
 
                 app.Run();
             }
             catch (Exception ex)
             {
-                //Ê¹ÓÃNlogĞ´µ½±¾µØÈÕÖ¾ÎÄ¼ş£¨ÍòÒ»Êı¾İ¿âÃ»´´½¨/Á¬½Ó³É¹¦£©
-                NLogUtil.WriteFileLog(NLog.LogLevel.Error, LogType.ApiRequest, "½Ó¿ÚÆô¶¯", "³õÊ¼»¯Êı¾İÒì³£", ex);
+                //ä½¿ç”¨Nlogå†™åˆ°æœ¬åœ°æ—¥å¿—æ–‡ä»¶ï¼ˆä¸‡ä¸€æ•°æ®åº“æ²¡åˆ›å»º/è¿æ¥æˆåŠŸï¼‰
+                NLogUtil.WriteFileLog(NLog.LogLevel.Error, LogType.ApiRequest, "æ¥å£å¯åŠ¨", "åˆå§‹åŒ–æ•°æ®å¼‚å¸¸", ex);
                 throw;
             }
         }

@@ -1,0 +1,37 @@
+# 忽略 Visual Studio 编译生成的临时文件
+[Oo][Bb][Jj]/
+[Bb][Ii][Nn]/
+[Dd][Ee][Bb][Uu][Gg]/
+[Rr][Ee][Ll][Ee][Aa][Ss][Ee]/
+[Xx]64/
+[Xx]86/
+
+# VS 用户特定文件和缓存
+.vs/
+*.user
+*.suo
+*.userosscache
+*.cache
+*.ilk
+*.pdb
+*.log
+
+# 编译输出文件
+*.exe
+*.dll
+*.lib
+*.exp
+*.ilk
+*.pdb
+
+# 其他 VS 相关文件
+*.opensdf
+*.sdf
+*.vshost.*
+*.manifest
+*.cache
+*.sln.docstates
+
+# NuGet 包管理相关
+packages/
+.nuget/
