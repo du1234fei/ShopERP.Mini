@@ -3,10 +3,9 @@
 </style>
 <script type="text/html" template lay-done="layui.data.done(d);">
     <div class="layui-form coreshop-form layui-form-pane" lay-filter="LAY-app-CoreCmsUser-registerForm" id="LAY-app-CoreCmsUser-registerForm">
-        <input type="hidden" name="id" id="id" value="{{d.params.data.model.id || '' }}" />
 
         <div class="layui-form-item">
-            <div class="layui-inline">
+            <div class="layui-inline layui-input-wrap layui-input-wrap-prefix">
                 <label class="layui-form-label">用户工号：</label>
                 <div class="layui-input-inline">
                     <input type="text" name="userName" required lay-verify="required|userName" class="layui-input">

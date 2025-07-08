@@ -80,7 +80,8 @@
             , form = layui.form
             , router = layui.router()
             , search = router.search
-            , coreHelper = layui.coreHelper;
+            , coreHelper = layui.coreHelper
+            , view = layui.view;;
 
         layui.data(setter.tableName, { key: setter.request.tokenName, value: '1111' });
         console.log(layui.data('CoreCms')['Authorization']);
@@ -158,7 +159,47 @@
         $('#loginRegister').click(function () {
           
             layer.msg('这个是注册按钮... ');
+            doRegister();
         });
+
+        //用户注册
+        function doRegister() {
+
+            admin.popup({
+                shadeClose: false,
+                title: '用户注册',
+                area: ['670px', '600px'],
+                id: 'LAY-popup-CoreCmsUser-register',
+                success: function (layero, index) {
+                    view(this.id).render('user/userInfo/register', { data: 'newUserRegister' }).done(function () {
+                        //监听提交
+                        form.on('submit(LAY-app-CoreCmsUser-registerForm-submit)',
+                            function (data) {
+                                var field = data.field; //获取提交的字段
+
+                                field.isDelete = field.isDelete == 'on';
+                                //提交 Ajax 成功后，关闭当前弹层并重载表格
+                                coreHelper.Post("Api/CoreCmsUser/DoCreate", field, function (e) {
+                                    console.log(e)
+                                    if (e.code === 0) {
+                                        layui.table.reloadData('LAY-app-CoreCmsUser-tableBox'); //重载表格
+                                        layer.close(index); //再执行关闭
+                                        layer.msg(e.msg);
+                                    } else {
+                                        layer.msg(e.msg);
+                                    }
+                                });
+                            });
+                    });
+                }
+                , btn: ['确定', '取消']
+                , yes: function (index, layero) {
+                    layero.contents().find("#LAY-app-CoreCmsUser-registerForm-submit").click();
+                }
+            });
+
+
+        }
 
 
     });
