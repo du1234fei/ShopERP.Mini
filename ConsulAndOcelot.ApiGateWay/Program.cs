@@ -15,6 +15,7 @@ namespace ConsulAndOcelot.ApiGateWay
             builder.Services.AddEndpointsApiExplorer();
             builder.Services.AddSwaggerGen(c => { /* Configuration */ });
 
+
             //添加 Ocelot 并添加配置文件
             builder.Configuration.AddJsonFile("ocelot.json", optional: true, reloadOnChange: true);
 
