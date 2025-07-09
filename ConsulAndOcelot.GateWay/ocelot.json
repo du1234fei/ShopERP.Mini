@@ -1,0 +1,32 @@
+{
+  "Routes": [
+    {
+      //转发到下游服务地址--url变量
+      "DownstreamPathTemplate": "/api/{url}",
+      //下游http协议
+      "DownstreamScheme": "http",
+      //负载方式，
+      "LoadBalancerOptions": {
+        "Type": "RoundRobin" // 轮询
+      },
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "192.168.8.248",
+          "Port": 5201 //服务端口
+        }, //可以多个，自行负载均衡
+        {
+          "Host": "192.168.8.248",
+          "Port": 5202 //服务端口
+        },
+        {
+          "Host": "192.168.8.248",
+          "Port": 5203 //服务端口
+        }
+      ],
+
+      //上游地址
+      "UpstreamPathTemplate": "/T1/{url}", //网关地址--url变量   //冲突的还可以加权重Priority
+      "UpstreamHttpMethod": [ "GET", "POST", "DELETE", "PUT" ]
+    }
+  ]
+}
