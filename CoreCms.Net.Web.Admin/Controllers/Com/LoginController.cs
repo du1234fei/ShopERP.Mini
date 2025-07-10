@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.IdentityModel.Tokens.Jwt;
 using System.Linq;
 using System.Runtime.InteropServices;
@@ -13,6 +14,7 @@ using CoreCms.Net.IServices;
 using CoreCms.Net.Model.Entities;
 using CoreCms.Net.Model.FromBody;
 using CoreCms.Net.Model.ViewModels.UI;
+using CoreCms.Net.Services;
 using CoreCms.Net.Utility.Extensions;
 using CoreCms.Net.Utility.Helper;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
@@ -37,6 +39,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
         private readonly ISysUserServices _sysUserServices;
         private readonly ISysRoleMenuServices _sysRoleMenuServices;
         private readonly ISysLoginRecordRepository _sysLoginRecordRepository;
+        private readonly ICoreCmsUserServices _coreCmsUserServices;
 
         #region 构造函数注入
         /// <summary>
@@ -44,6 +47,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
         /// </summary>
         public LoginController(
             PermissionRequirement permissionRequirement
+            , ICoreCmsUserServices coreCmsUserServices
             , ISysUserServices sysUserServices
             , ISysRoleMenuServices sysRoleMenuServices
             , IHttpContextAccessor httpContextAccessor
@@ -55,6 +59,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
             _sysRoleMenuServices = sysRoleMenuServices;
             _httpContextAccessor = httpContextAccessor;
             _sysLoginRecordRepository = sysLoginRecordRepository;
+            _coreCmsUserServices = coreCmsUserServices;
         } 
         #endregion
 
@@ -231,7 +236,49 @@ namespace CoreCms.Net.Web.Admin.Controllers
             jm.code = 1001;
             jm.msg = "token无效，请重新登录！";
             return jm;
-        } 
+        }
+        #endregion
+
+
+        #region 用户注册============================================================
+
+        // POST: api/login/DoCreate
+        /// <summary>
+        /// 用户注册
+        /// </summary>
+        /// <param name="entity"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Description("用户注册")]
+        public async Task<AdminUiCallBack> DoCreate([FromBody] CoreCmsUser entity)
+        {
+            var jm = new AdminUiCallBack();
+
+            if (string.IsNullOrEmpty(entity.mobile))
+            {
+                jm.msg = "请输入用户手机号";
+                return jm;
+            }
+
+            var isHava = await _coreCmsUserServices.ExistsAsync(p => p.mobile == entity.mobile);
+            if (isHava)
+            {
+                jm.msg = "已存在此手机号码";
+                return jm;
+            }
+
+            entity.createTime = DateTime.Now;
+            entity.passWord = CommonHelper.Md5For32(entity.passWord);
+            entity.parentId = 0;
+
+            var bl = await _coreCmsUserServices.InsertAsync(entity) > 0;
+            jm.code = bl ? 0 : 1;
+            jm.msg = bl ? GlobalConstVars.CreateSuccess : GlobalConstVars.CreateFailure;
+
+
+            return jm;
+        }
+
         #endregion
 
     }

@@ -25,7 +25,7 @@ using SqlSugar;
 namespace CoreCms.Net.Web.Admin.Controllers
 {
     /// <summary>
-    ///     用户表
+    /// 用户表
     /// </summary>
     [Description("用户表")]
     [Route("api/[controller]/[action]")]
@@ -293,7 +293,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
 
         // POST: Api/CoreCmsUser/DoCreate
         /// <summary>
-        ///     创建提交
+        /// 创建提交
         /// </summary>
         /// <param name="entity"></param>
         /// <returns></returns>

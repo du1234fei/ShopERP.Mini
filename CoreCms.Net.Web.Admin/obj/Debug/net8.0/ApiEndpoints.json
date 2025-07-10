@@ -11650,6 +11650,32 @@
   },
   {
     "ContainingType": "CoreCms.Net.Web.Admin.Controllers.LoginController",
+    "Method": "DoCreate",
+    "RelativePath": "api/Login/DoCreate",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "entity",
+        "Type": "CoreCms.Net.Model.Entities.CoreCmsUser",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": [
+      {
+        "Type": "CoreCms.Net.Model.ViewModels.UI.AdminUiCallBack",
+        "MediaTypes": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "StatusCode": 200
+      }
+    ]
+  },
+  {
+    "ContainingType": "CoreCms.Net.Web.Admin.Controllers.LoginController",
     "Method": "GetJwtToken",
     "RelativePath": "api/Login/GetJwtToken",
     "HttpMethod": "POST",

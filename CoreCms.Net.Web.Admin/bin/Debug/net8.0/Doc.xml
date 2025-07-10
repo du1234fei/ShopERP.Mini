@@ -530,7 +530,7 @@
             用户授权登录
             </summary>
         </member>
-        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.#ctor(CoreCms.Net.Auth.Policys.PermissionRequirement,CoreCms.Net.IServices.ISysUserServices,CoreCms.Net.IServices.ISysRoleMenuServices,Microsoft.AspNetCore.Http.IHttpContextAccessor,CoreCms.Net.IRepository.ISysLoginRecordRepository)">
+        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.#ctor(CoreCms.Net.Auth.Policys.PermissionRequirement,CoreCms.Net.IServices.ICoreCmsUserServices,CoreCms.Net.IServices.ISysUserServices,CoreCms.Net.IServices.ISysRoleMenuServices,Microsoft.AspNetCore.Http.IHttpContextAccessor,CoreCms.Net.IRepository.ISysLoginRecordRepository)">
             <summary>
             构造函数注入
             </summary>
@@ -547,6 +547,13 @@
             请求刷新Token（以旧换新）
             </summary>
             <param name="token"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.DoCreate(CoreCms.Net.Model.Entities.CoreCmsUser)">
+            <summary>
+            用户注册
+            </summary>
+            <param name="entity"></param>
             <returns></returns>
         </member>
         <member name="T:CoreCms.Net.Web.Admin.Controllers.ToolsController">
@@ -4584,7 +4591,7 @@
         </member>
         <member name="T:CoreCms.Net.Web.Admin.Controllers.CoreCmsUserController">
             <summary>
-                用户表
+            用户表
             </summary>
         </member>
         <member name="M:CoreCms.Net.Web.Admin.Controllers.CoreCmsUserController.#ctor(Microsoft.AspNetCore.Hosting.IWebHostEnvironment,CoreCms.Net.IServices.ICoreCmsUserServices,CoreCms.Net.IServices.ICoreCmsUserGradeServices,CoreCms.Net.IServices.ICoreCmsUserBalanceServices,CoreCms.Net.IServices.ICoreCmsUserPointLogServices)">
@@ -4617,7 +4624,7 @@
         </member>
         <member name="M:CoreCms.Net.Web.Admin.Controllers.CoreCmsUserController.DoCreate(CoreCms.Net.Model.Entities.CoreCmsUser)">
             <summary>
-                创建提交
+            创建提交
             </summary>
             <param name="entity"></param>
             <returns></returns>
