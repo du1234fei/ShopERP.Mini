@@ -47,14 +47,6 @@ namespace CoreCms.Net.Web.Admin.Infrastructure
             //使用 SignalR
             builder.Services.AddSignalR();
 
-            // 引入Payment 依赖注入(支付宝支付/微信支付)
-            builder.Services.AddAlipay();
-            builder.Services.AddWeChatPay();
-
-            // 在 appsettings.json 中 配置选项
-            builder.Services.Configure<WeChatPayOptions>(builder.Configuration.GetSection("WeChatPay"));
-            builder.Services.Configure<AlipayOptions>(builder.Configuration.GetSection("Alipay"));
-
             // 注入工厂 HTTP 客户端
             builder.Services.AddHttpClient();
 

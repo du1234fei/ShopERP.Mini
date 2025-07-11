@@ -80,7 +80,7 @@ namespace CoreCms.Net.Core.Config
                         Version = version,
                         Title = $"{apiName} 接口文档",
                         Description = $"{apiName} HTTP API " + version,
-                        Contact = new OpenApiContact { Name = apiName, Email = "JianWeie@163.com", Url = new Uri("https://CoreCms.Net") },
+                        Contact = new OpenApiContact { Name = apiName, Email = "ShopERP@163.com", Url = new Uri("https://ShopERP") },
                     });
                     s.OrderActionsBy(o => o.RelativePath);
                 });
