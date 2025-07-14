@@ -62,7 +62,7 @@
                 </main>
 
                  <footer class=mt-5>
-                     <small style="float:right;"><a href="http://www.baidu.cn/" target="_blank">忘记密码？</a></small>
+                     <small style="float:right;"><a href="javascript:;" id="forgetPasswordBtn">忘记密码？</a></small>
                 </footer>
 
             </div>
@@ -154,6 +154,47 @@
             });
         });
 
+        // 标准事件绑定
+        $('#forgetPasswordBtn').on('click', function () {
+
+            layer.msg('按钮被点击');
+
+            admin.popup({
+                shadeClose: false,
+                title: '忘记密码',
+                area: ['390px', '500px'],
+                id: 'LAY-popup-CoreCmsUser-register',
+                success: function (layero, index) {
+                    view(this.id).render('user/userInfo/forgetPassword', { data: 'forgetPassword' }).done(function () {
+                        //监听提交
+                        form.on('submit(LAY-app-CoreCmsUser-forgetPasswordForm-submit)',
+                            function (data) {
+
+                                var field = data.field; //获取提交的字段
+                                field.isDelete = field.isDelete == 'on';
+
+                                //提交 Ajax 成功后，关闭当前弹层并重载表格
+                                coreHelper.Post("api/login/DoCreate", field, function (e) {
+                                    console.log(e)
+                                    if (e.code === 0) {
+
+                                        layer.close(index); //再执行关闭
+                                        layer.msg(e.msg);
+                                    } else {
+                                        layer.msg(e.msg);
+                                    }
+                                });
+
+                            });
+                    });
+                }
+                , btn: ['确定', '取消']
+                , yes: function (index, layero) {
+                    layero.contents().find("#LAY-app-CoreCmsUser-forgetPasswordForm-submit").click();
+                }
+            });
+
+        });
 
         //用户注册事件
         $('#loginRegister').click(function () {
