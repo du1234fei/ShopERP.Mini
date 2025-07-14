@@ -107,6 +107,10 @@
         /// </summary>
         public const string SetDataFailure = "设置数据失败！";
 
+        public const string SendEmailSuccess = "发送邮件成功！";
+
+        public const string SendEmailFailure = "发送邮件失败！";
+
         //缓存数据
         /// <summary>
         /// 缓存已经排序后台导航

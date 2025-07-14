@@ -14,6 +14,7 @@ using CoreCms.Net.IServices;
 using CoreCms.Net.Model.Entities;
 using CoreCms.Net.Model.FromBody;
 using CoreCms.Net.Model.ViewModels.DTO.UserInfo;
+using CoreCms.Net.Model.ViewModels.Email;
 using CoreCms.Net.Model.ViewModels.UI;
 using CoreCms.Net.Services;
 using CoreCms.Net.Utility.Extensions;
@@ -41,6 +42,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
         private readonly ISysRoleMenuServices _sysRoleMenuServices;
         private readonly ISysLoginRecordRepository _sysLoginRecordRepository;
         private readonly ICoreCmsUserServices _coreCmsUserServices;
+        private readonly EmailSenderHelper _emailSender;//发邮件的服务
 
         #region 构造函数注入
         /// <summary>
@@ -53,6 +55,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
             , ISysRoleMenuServices sysRoleMenuServices
             , IHttpContextAccessor httpContextAccessor
             , ISysLoginRecordRepository sysLoginRecordRepository
+            , EmailSenderHelper emailSender
             )
         {
             _permissionRequirement = permissionRequirement;
@@ -61,7 +64,8 @@ namespace CoreCms.Net.Web.Admin.Controllers
             _httpContextAccessor = httpContextAccessor;
             _sysLoginRecordRepository = sysLoginRecordRepository;
             _coreCmsUserServices = coreCmsUserServices;
-        } 
+            _emailSender = emailSender;
+        }
         #endregion
 
         #region 获取JWT的授权
@@ -281,6 +285,90 @@ namespace CoreCms.Net.Web.Admin.Controllers
             jm.code = bl ? 0 : 1;
             jm.msg = bl ? GlobalConstVars.CreateSuccess : GlobalConstVars.CreateFailure;
             return jm;
+        }
+
+        #endregion
+
+        #region 忘记密码-发送验证码
+        /// <summary>
+        /// POST: api/login/DoSendValidCode
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Description("发送验证码修改密码")]
+        public async Task<AdminUiCallBack> DoSendValidCode([FromBody] FMSendValidCodeForgetPasswordPost param)
+        {
+            var jm = new AdminUiCallBack();
+
+            if (string.IsNullOrEmpty(param.userEmail))
+            {
+                jm.msg = "请输入用户邮箱！";
+                return jm;
+            }
+
+            var user = await _sysUserServices.QueryByClauseAsync(p => p.userName == param.userName && p.email == param.userEmail);
+            if (user != null)
+            {
+                if (user.state == 1)
+                {
+                    jm.msg = "您的账户已经被冻结,请联系管理员解锁";
+                    return jm;
+                }
+
+                //发送验证码, 发送邮件
+                Random rd = new Random();
+                int codeNumber = rd.Next(100000, 999999);
+
+                SendVerificationEmailAsync(param.userEmail, codeNumber.ToString());
+
+                var bl = true;
+                jm.code = bl ? 0 : 1;
+                jm.msg = bl ? GlobalConstVars.SendEmailSuccess : GlobalConstVars.SendEmailFailure;
+                return jm;
+            }
+            else
+            {
+                jm.msg = "您输入的用户与邮箱不匹配！";
+                return jm;
+            }
+        }
+
+        /// <summary>
+        /// 异步发送验证码
+        /// </summary>
+        /// <param name="email"></param>
+        /// <param name="verificationCode"></param>
+        public async void SendVerificationEmailAsync(string email, string verificationCode)
+        {
+            var message = new MailMessageModel()
+            {
+                ToAddresses = new List<string> { email },
+                Subject = "邮箱验证码",
+                Body = $"""
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <meta charset="utf-8">
+                        <title>邮箱验证</title>
+                    </head>
+                    <body>
+                        <div style="max-width: 600px; margin: 0 auto; font-family: Arial, sans-serif;">
+                            <h2 style="color: #1e9fff;">邮箱验证请求</h2>
+                            <p>您的验证码是：<strong style="font-size: 24px; letter-spacing: 2px;">
+                                {verificationCode}
+                            </strong></p>
+                            <p>验证码将在30分钟后失效，请尽快使用。</p>
+                            <hr style="border: 0; border-top: 1px solid #eee;">
+                            <p style="color: #999; font-size: 12px;">此为系统邮件，请勿直接回复</p>
+                        </div>
+                    </body>
+                    </html>
+                    """,
+                IsBodyHtml = true
+            };
+
+            await _emailSender.SendEmailAsync(message);
         }
 
         #endregion

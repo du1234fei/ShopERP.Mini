@@ -530,7 +530,7 @@
             用户授权登录
             </summary>
         </member>
-        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.#ctor(CoreCms.Net.Auth.Policys.PermissionRequirement,CoreCms.Net.IServices.ICoreCmsUserServices,CoreCms.Net.IServices.ISysUserServices,CoreCms.Net.IServices.ISysRoleMenuServices,Microsoft.AspNetCore.Http.IHttpContextAccessor,CoreCms.Net.IRepository.ISysLoginRecordRepository)">
+        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.#ctor(CoreCms.Net.Auth.Policys.PermissionRequirement,CoreCms.Net.IServices.ICoreCmsUserServices,CoreCms.Net.IServices.ISysUserServices,CoreCms.Net.IServices.ISysRoleMenuServices,Microsoft.AspNetCore.Http.IHttpContextAccessor,CoreCms.Net.IRepository.ISysLoginRecordRepository,CoreCms.Net.Utility.Helper.EmailSenderHelper)">
             <summary>
             构造函数注入
             </summary>
@@ -555,6 +555,20 @@
             </summary>
             <param name="param"></param>
             <returns></returns>
+        </member>
+        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.DoSendValidCode(CoreCms.Net.Model.FromBody.FMSendValidCodeForgetPasswordPost)">
+            <summary>
+            POST: api/login/DoSendValidCode
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
+        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.SendVerificationEmailAsync(System.String,System.String)">
+            <summary>
+            异步发送验证码
+            </summary>
+            <param name="email"></param>
+            <param name="verificationCode"></param>
         </member>
         <member name="T:CoreCms.Net.Web.Admin.Controllers.ToolsController">
             <summary>

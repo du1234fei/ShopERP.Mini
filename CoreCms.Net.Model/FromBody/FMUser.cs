@@ -131,4 +131,18 @@ namespace CoreCms.Net.Model.FromBody
         /// </summary>
         public string propsDate { get; set; }
     }
+
+
+    /// <summary>
+    /// API 发送验证码-忘记密码
+    /// </summary>
+    public class FMSendValidCodeForgetPasswordPost
+    { 
+       public string userName { get; set; }
+
+        public string userEmail { get; set; }
+    }
+
+
+
 }
