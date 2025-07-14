@@ -154,15 +154,12 @@
             });
         });
 
-        // 标准事件绑定
+        // 忘记密码-事件绑定
         $('#forgetPasswordBtn').on('click', function () {
-
-            layer.msg('按钮被点击');
-
             admin.popup({
                 shadeClose: false,
                 title: '忘记密码',
-                area: ['390px', '500px'],
+                area: ['430px', '500px'],
                 id: 'LAY-popup-CoreCmsUser-register',
                 success: function (layero, index) {
                     view(this.id).render('user/userInfo/forgetPassword', { data: 'forgetPassword' }).done(function () {
