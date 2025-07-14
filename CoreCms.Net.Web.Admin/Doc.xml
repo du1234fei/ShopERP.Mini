@@ -549,11 +549,11 @@
             <param name="token"></param>
             <returns></returns>
         </member>
-        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.DoCreate(CoreCms.Net.Model.Entities.CoreCmsUser)">
+        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.DoCreate(CoreCms.Net.Model.ViewModels.DTO.UserInfo.UserRegisterModel)">
             <summary>
             用户注册
             </summary>
-            <param name="entity"></param>
+            <param name="param"></param>
             <returns></returns>
         </member>
         <member name="T:CoreCms.Net.Web.Admin.Controllers.ToolsController">

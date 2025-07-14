@@ -13,6 +13,7 @@ using CoreCms.Net.IRepository;
 using CoreCms.Net.IServices;
 using CoreCms.Net.Model.Entities;
 using CoreCms.Net.Model.FromBody;
+using CoreCms.Net.Model.ViewModels.DTO.UserInfo;
 using CoreCms.Net.Model.ViewModels.UI;
 using CoreCms.Net.Services;
 using CoreCms.Net.Utility.Extensions;
@@ -241,41 +242,44 @@ namespace CoreCms.Net.Web.Admin.Controllers
 
 
         #region 用户注册============================================================
-
         // POST: api/login/DoCreate
         /// <summary>
         /// 用户注册
         /// </summary>
-        /// <param name="entity"></param>
+        /// <param name="param"></param>
         /// <returns></returns>
         [HttpPost]
         [Description("用户注册")]
-        public async Task<AdminUiCallBack> DoCreate([FromBody] CoreCmsUser entity)
+        public async Task<AdminUiCallBack> DoCreate([FromBody] UserRegisterModel param)
         {
             var jm = new AdminUiCallBack();
 
-            if (string.IsNullOrEmpty(entity.mobile))
+            if (string.IsNullOrEmpty(param.phone))
             {
                 jm.msg = "请输入用户手机号";
                 return jm;
             }
 
-            var isHava = await _coreCmsUserServices.ExistsAsync(p => p.mobile == entity.mobile);
-            if (isHava)
+            var isHave = await _sysUserServices.ExistsAsync(p => p.phone == param.phone);
+            if (isHave)
             {
                 jm.msg = "已存在此手机号码";
                 return jm;
             }
 
+            SysUser entity = new SysUser();
+            entity.userName = param.userName;
+            entity.passWord = CommonHelper.Md5For32(param.passWord);
+            entity.nickName = param.nickName;
+            entity.sex = 0;
+            entity.phone = param.phone;
+            entity.email = param.email;
             entity.createTime = DateTime.Now;
-            entity.passWord = CommonHelper.Md5For32(entity.passWord);
-            entity.parentId = 0;
+            entity.updateTime = DateTime.Now;
 
-            var bl = await _coreCmsUserServices.InsertAsync(entity) > 0;
+            var bl = await _sysUserServices.InsertAsync(entity) > 0;
             jm.code = bl ? 0 : 1;
             jm.msg = bl ? GlobalConstVars.CreateSuccess : GlobalConstVars.CreateFailure;
-
-
             return jm;
         }
 

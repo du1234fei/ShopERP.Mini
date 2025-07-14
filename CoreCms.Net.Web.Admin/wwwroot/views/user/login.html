@@ -179,14 +179,13 @@
                                 layer.msg('这个是确认注册的点击事件... ');
 
                                 var field = data.field; //获取提交的字段
-
                                 field.isDelete = field.isDelete == 'on';
 
                                 //提交 Ajax 成功后，关闭当前弹层并重载表格
                                 coreHelper.Post("api/login/DoCreate", field, function (e) {
                                     console.log(e)
                                     if (e.code === 0) {
-                                        layui.table.reloadData('LAY-app-CoreCmsUser-tableBox'); //重载表格
+                                      
                                         layer.close(index); //再执行关闭
                                         layer.msg(e.msg);
                                     } else {
