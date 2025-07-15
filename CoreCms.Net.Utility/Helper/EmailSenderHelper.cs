@@ -55,12 +55,10 @@ namespace CoreCms.Net.Utility.Helper
             catch (SmtpException ex)
             {
                 _logger?.LogError(ex, $"SMTP error sending email: {ex.Message}");
-                throw; // Rethrow to allow caller handling
             }
             catch (Exception ex)
             {
                 _logger?.LogError(ex, $"Error sending email: {ex.Message}");
-                throw;
             }
         }
 
@@ -84,7 +82,7 @@ namespace CoreCms.Net.Utility.Helper
 
             var mail = new MailMessage
             {
-                From = new MailAddress(fromAddress, _config.DisplayName),
+                From = new MailAddress(fromAddress),
                 Subject = model.Subject ?? "[No Subject]",
                 Body = model.Body ?? string.Empty,
                 IsBodyHtml = model.IsBodyHtml,

@@ -365,6 +365,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
                     </body>
                     </html>
                     """,
+
                 IsBodyHtml = true
             };
 

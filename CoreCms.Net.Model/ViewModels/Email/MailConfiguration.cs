@@ -9,14 +9,14 @@ namespace CoreCms.Net.Model.ViewModels.Email
     public class MailConfiguration
     {
         public string SmtpServer { get; set; } = string.Empty;
-        public int SmtpPort { get; set; } = 587;
+        public int SmtpPort { get; set; } = 465;
         public string UserName { get; set; } = string.Empty;
         public string Password { get; set; } = string.Empty;
         public string DisplayName { get; set; } = "System Notification";
         public bool EnableSsl { get; set; } = true;
         public string FromAddress { get; set; } = string.Empty;
         public int Timeout { get; set; } = 10000; // 10 seconds
-        public bool UseDefaultCredentials { get; set; } = false;
+        public bool UseDefaultCredentials { get; set; } = true;
     }
 
     /// <summary>
