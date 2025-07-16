@@ -5,6 +5,7 @@ using CoreCms.Net.Utility.Helper;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
+using System.Net;
 using System.Threading.Tasks;
 
 namespace CoreCms.Net.Web.WebApi.Controllers
@@ -75,7 +76,11 @@ namespace CoreCms.Net.Web.WebApi.Controllers
                 IsBodyHtml = true
             };
 
-            await _emailSender.SendEmailAsync(message);
+            // 在应用启动代码前添加
+            System.Net.ServicePointManager.SecurityProtocol =
+                SecurityProtocolType.Tls12 | SecurityProtocolType.Tls13;
+
+            await _emailSender.SendWithMailKitAsync(message);
 
             return jm;
         }

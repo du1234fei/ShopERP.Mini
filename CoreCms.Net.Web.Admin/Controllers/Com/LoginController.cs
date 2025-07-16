@@ -369,7 +369,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
                 IsBodyHtml = true
             };
 
-            await _emailSender.SendEmailAsync(message);
+            await _emailSender.SendWithMailKitAsync(message);
         }
 
         #endregion

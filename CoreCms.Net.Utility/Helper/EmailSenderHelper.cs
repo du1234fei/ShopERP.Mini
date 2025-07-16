@@ -1,5 +1,7 @@
 ﻿using CoreCms.Net.Model.ViewModels.Email;
 using Microsoft.Extensions.Logging;
+using MimeKit;
+using MimeKit.Text;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -9,6 +11,7 @@ using System.Net.Mail;
 using System.Net.Mime;
 using System.Text;
 using System.Threading.Tasks;
+using ContentDisposition = MimeKit.ContentDisposition;
 
 namespace CoreCms.Net.Utility.Helper
 {
@@ -36,85 +39,113 @@ namespace CoreCms.Net.Utility.Helper
                 throw new ArgumentNullException(nameof(_config.Password));
         }
 
-        public async Task SendEmailAsync(MailMessageModel message)
+        #region 异步发送 EMail 信息
+        /// <summary>
+        /// 异步发送 EMail 信息
+        /// </summary>
+        /// <param name="model"></param>
+        /// <returns></returns>
+        public async Task SendWithMailKitAsync(MailMessageModel model)
         {
-            if (message == null)
-                throw new ArgumentNullException(nameof(message));
+            var message = new MimeMessage();
 
-            if (!message.ToAddresses.Any())
-                throw new InvalidOperationException("No recipients specified");
+            // 设置发件人
+            message.From.Add(new MailboxAddress("Sender", _config.FromAddress));
 
-            using var smtpClient = CreateSmtpClient();
-            using var mailMessage = CreateMailMessage(message);
+            // 添加收件人
+            AddRecipients(message.To, model.ToAddresses);
 
-            try
+            // 添加抄送
+            if (model.CcAddresses?.Count > 0)
             {
-                await smtpClient.SendMailAsync(mailMessage);
-                _logger?.LogInformation($"Email sent to {string.Join(", ", message.ToAddresses)}");
+                AddRecipients(message.Cc, model.CcAddresses);
             }
-            catch (SmtpException ex)
-            {
-                _logger?.LogError(ex, $"SMTP error sending email: {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                _logger?.LogError(ex, $"Error sending email: {ex.Message}");
-            }
-        }
 
-        private SmtpClient CreateSmtpClient()
-        {
-            return new SmtpClient(_config.SmtpServer, _config.SmtpPort)
+            // 添加密送
+            if (model.BccAddresses?.Count > 0)
             {
-                EnableSsl = _config.EnableSsl,
-                Credentials = new NetworkCredential(_config.UserName, _config.Password),
-                DeliveryMethod = SmtpDeliveryMethod.Network,
-                Timeout = _config.Timeout,
-                UseDefaultCredentials = _config.UseDefaultCredentials
+                AddRecipients(message.Bcc, model.BccAddresses);
+            }
+
+            // 设置主题
+            message.Subject = model.Subject ?? "[No Subject]";
+
+            // 创建多部分邮件
+            var multipart = new Multipart("mixed");
+
+            // 创建正文部分
+            var textPart = new TextPart(model.IsBodyHtml ? TextFormat.Html : TextFormat.Plain)
+            {
+                Text = model.Body ?? string.Empty
             };
-        }
+            multipart.Add(textPart);
 
-        private MailMessage CreateMailMessage(MailMessageModel model)
+            // 添加附件
+            AddAttachments(multipart, model.Attachments);
+
+            message.Body = multipart;
+
+            using var client = new MailKit.Net.Smtp.SmtpClient();
+
+            // 阿里邮箱的特殊设置
+            client.ServerCertificateValidationCallback = (s, c, h, e) => true;
+            client.Connect(_config.SmtpServer, _config.SmtpPort, MailKit.Security.SecureSocketOptions.SslOnConnect);
+
+            client.Authenticate(_config.UserName, _config.Password);
+            await client.SendAsync(message);
+            client.Disconnect(true);
+        } 
+        #endregion
+
+        #region 添加收件人
+        /// <summary>
+        /// 添加收件人
+        /// </summary>
+        /// <param name="list"></param>
+        /// <param name="addresses"></param>
+        private void AddRecipients(InternetAddressList list, IEnumerable<string> addresses)
         {
-            var fromAddress = string.IsNullOrWhiteSpace(_config.FromAddress)
-                ? _config.UserName
-                : _config.FromAddress;
-
-            var mail = new MailMessage
+            foreach (var address in addresses)
             {
-                From = new MailAddress(fromAddress),
-                Subject = model.Subject ?? "[No Subject]",
-                Body = model.Body ?? string.Empty,
-                IsBodyHtml = model.IsBodyHtml,
-                BodyEncoding = model.Encoding ?? Encoding.UTF8,
-                SubjectEncoding = model.Encoding ?? Encoding.UTF8
-            };
-
-            // Add recipients
-            model.ToAddresses.ForEach(to => mail.To.Add(to));
-            model.CcAddresses?.ForEach(cc => mail.CC.Add(cc));
-            model.BccAddresses?.ForEach(bcc => mail.Bcc.Add(bcc));
-
-            // Add attachments
-            if (model.Attachments != null)
-            {
-                foreach (var attachment in model.Attachments)
+                if (!string.IsNullOrWhiteSpace(address))
                 {
-                    if (attachment.FileData == null || string.IsNullOrWhiteSpace(attachment.FileName))
-                        continue;
-
-                    var stream = new MemoryStream(attachment.FileData);
-                    mail.Attachments.Add(new Attachment(
-                        stream,
-                        attachment.FileName,
-                        attachment.MediaType ?? MediaTypeNames.Application.Octet
-                    ));
+                    list.Add(MailboxAddress.Parse(address.Trim()));
                 }
             }
+        } 
+        #endregion
 
-            return mail;
-        }
+        #region 添加附件列表
+        /// <summary>
+        /// 添加附件列表
+        /// </summary>
+        /// <param name="multipart"></param>
+        /// <param name="attachments"></param>
+        private void AddAttachments(Multipart multipart, IEnumerable<MailAttachment> attachments)
+        {
+            if (attachments == null) return;
 
+            foreach (var attachment in attachments)
+            {
+                if (attachment?.FileData == null || string.IsNullOrWhiteSpace(attachment.FileName))
+                    continue;
+
+                var mimeType = string.IsNullOrWhiteSpace(attachment.MediaType)
+                    ? MimeTypes.GetMimeType(attachment.FileName)
+                    : attachment.MediaType;
+
+                var part = new MimePart(mimeType)
+                {
+                    Content = new MimeContent(new MemoryStream(attachment.FileData)),
+                    ContentDisposition = new ContentDisposition(ContentDisposition.Attachment),
+                    ContentTransferEncoding = ContentEncoding.Base64,
+                    FileName = attachment.FileName
+                };
+
+                multipart.Add(part);
+            }
+        } 
+        #endregion
 
     }
 }
