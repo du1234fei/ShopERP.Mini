@@ -39,9 +39,9 @@ namespace CoreCms.Net.Utility.Helper
                 throw new ArgumentNullException(nameof(_config.Password));
         }
 
-        #region 异步发送 EMail 信息
+        #region 使用MailKit 异步发送 EMail 信息
         /// <summary>
-        /// 异步发送 EMail 信息
+        /// 使用MailKit 异步发送 EMail 信息
         /// </summary>
         /// <param name="model"></param>
         /// <returns></returns>
