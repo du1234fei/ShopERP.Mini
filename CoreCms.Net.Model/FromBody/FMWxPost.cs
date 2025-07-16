@@ -124,6 +124,25 @@ namespace CoreCms.Net.Model.FromBody
         public string method { get; set; }
     }
 
+
+    public class FMSendEmail
+    {
+        /// <summary>
+        ///     操作类型
+        /// </summary>
+        public string code { get; set; }
+
+        /// <summary>
+        /// 邮箱
+        /// </summary>
+        public string email { get; set; }
+
+        /// <summary>
+        /// 发送内容
+        /// </summary>
+        public string content { get; set; }
+    }
+
     /// <summary>
     ///     用户发起订阅提交
     /// </summary>

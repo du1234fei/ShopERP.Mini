@@ -195,10 +195,10 @@
             </summary>
         </member>
         <member name="M:CoreCms.Net.Web.WebApi.Controllers.DemoController.Index">
-            <summary>
-                默认首页
-            </summary>
-            <returns></returns>
+             <summary>
+            默认首页
+             </summary>
+             <returns></returns>
         </member>
         <member name="T:CoreCms.Net.Web.WebApi.Controllers.DistributionController">
             <summary>
@@ -721,6 +721,24 @@
             <summary>
             核销订单
             </summary>
+            <returns></returns>
+        </member>
+        <member name="T:CoreCms.Net.Web.WebApi.Controllers.TestController">
+            <summary>
+            用户测试事件
+            </summary>
+        </member>
+        <member name="M:CoreCms.Net.Web.WebApi.Controllers.TestController.#ctor(CoreCms.Net.Utility.Helper.EmailSenderHelper)">
+            <summary>
+            构造函数注入
+            </summary>
+            <param name="emailSender"></param>
+        </member>
+        <member name="M:CoreCms.Net.Web.WebApi.Controllers.TestController.SendEmail(CoreCms.Net.Model.FromBody.FMSendEmail)">
+            <summary>
+            用户邮箱发送
+            </summary>
+            <param name="entity"></param>
             <returns></returns>
         </member>
         <member name="T:CoreCms.Net.Web.WebApi.Controllers.UserController">

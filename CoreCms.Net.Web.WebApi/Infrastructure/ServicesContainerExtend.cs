@@ -3,10 +3,13 @@ using CoreCms.Net.Configuration;
 using CoreCms.Net.Core.Config;
 using CoreCms.Net.Loging;
 using CoreCms.Net.Mapping;
+using CoreCms.Net.Model.ViewModels.Email;
+using CoreCms.Net.Utility.Helper;
 using Essensoft.Paylink.Alipay;
 using Essensoft.Paylink.WeChatPay;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Mvc.Controllers;
+using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 using Newtonsoft.Json;
@@ -34,6 +37,21 @@ namespace CoreCms.Net.Web.WebApi.Infrastructure
             builder.Services.AddMemoryCacheSetup();
             //Redis缓存
             builder.Services.AddRedisCacheSetup();
+
+            // 从配置中读取邮件设置
+            var mailConfig = new MailConfiguration
+            {
+                SmtpServer = builder.Configuration["Smtp:Server"],
+                SmtpPort = builder.Configuration.GetValue<int>("Smtp:Port"),
+                UserName = builder.Configuration["Smtp:Username"],
+                Password = builder.Configuration["Smtp:Password"],
+                FromAddress = builder.Configuration["Smtp:FromAddress"],
+                DisplayName = builder.Configuration["Smtp:DisplayName"] ?? "My Application"
+            };
+
+            // 注册邮件服务
+            builder.Services.AddSingleton(mailConfig);
+            builder.Services.AddScoped<EmailSenderHelper>();
 
             //添加数据库连接SqlSugar注入支持
             builder.Services.AddSqlSugarSetup();

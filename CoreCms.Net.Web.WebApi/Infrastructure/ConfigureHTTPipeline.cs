@@ -35,6 +35,7 @@ namespace CoreCms.Net.Web.WebApi.Infrastructure
             app.UseRecordAccessLogsMildd();
             // 记录ip请求 (注意开启权限，不然本地无法写入)
             app.UseIpLogMildd();
+
             // Swagger授权登录拦截
             app.UseSwaggerAuthorizedMildd();
             //强制显示中文

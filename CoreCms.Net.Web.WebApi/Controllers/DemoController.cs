@@ -1,5 +1,9 @@
 ﻿
+using CoreCms.Net.Model.ViewModels.Email;
+using CoreCms.Net.Utility.Helper;
 using Microsoft.AspNetCore.Mvc;
+using System;
+using System.Collections.Generic;
 
 namespace CoreCms.Net.Web.WebApi.Controllers
 {
@@ -9,12 +13,13 @@ namespace CoreCms.Net.Web.WebApi.Controllers
     public class DemoController : ControllerBase
     {
         /// <summary>
-        ///     默认首页
+        ///默认首页
         /// </summary>
         /// <returns></returns>
         public IActionResult Index()
         {
             return Content("已结束");
         }
+
     }
 }
