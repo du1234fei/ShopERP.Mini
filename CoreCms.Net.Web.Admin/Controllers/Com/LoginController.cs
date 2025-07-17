@@ -8,6 +8,7 @@ using System.Security.Claims;
 using System.Threading.Tasks;
 using CoreCms.Net.Auth.OverWrite;
 using CoreCms.Net.Auth.Policys;
+using CoreCms.Net.Caching.AutoMate.RedisCache;
 using CoreCms.Net.Configuration;
 using CoreCms.Net.IRepository;
 using CoreCms.Net.IServices;
@@ -42,6 +43,8 @@ namespace CoreCms.Net.Web.Admin.Controllers
         private readonly ISysRoleMenuServices _sysRoleMenuServices;
         private readonly ISysLoginRecordRepository _sysLoginRecordRepository;
         private readonly ICoreCmsUserServices _coreCmsUserServices;
+
+        private readonly IRedisOperationRepository _redisOperationRepository;//Redis 操作
         private readonly EmailSenderHelper _emailSender;//发邮件的服务
 
         #region 构造函数注入
@@ -55,6 +58,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
             , ISysRoleMenuServices sysRoleMenuServices
             , IHttpContextAccessor httpContextAccessor
             , ISysLoginRecordRepository sysLoginRecordRepository
+            , IRedisOperationRepository redisOperationRepository
             , EmailSenderHelper emailSender
             )
         {
@@ -64,6 +68,8 @@ namespace CoreCms.Net.Web.Admin.Controllers
             _httpContextAccessor = httpContextAccessor;
             _sysLoginRecordRepository = sysLoginRecordRepository;
             _coreCmsUserServices = coreCmsUserServices;
+
+            _redisOperationRepository = redisOperationRepository;//Redis 操作类,通过构造函数注入来初始化
             _emailSender = emailSender;
         }
         #endregion
@@ -322,6 +328,10 @@ namespace CoreCms.Net.Web.Admin.Controllers
 
                 SendVerificationEmailAsync(param.userEmail, codeNumber.ToString());
 
+                string strCacheKey = RedisCacheKey.ForgetPasswordCacheKey + param.userName;
+
+                await _redisOperationRepository.Set(strCacheKey, codeNumber, TimeSpan.FromMinutes(10));
+
                 var bl = true;
                 jm.code = bl ? 0 : 1;
                 jm.msg = bl ? GlobalConstVars.SendEmailSuccess : GlobalConstVars.SendEmailFailure;
@@ -358,7 +368,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
                             <p>您的验证码是：<strong style="font-size: 24px; letter-spacing: 2px;">
                                 {verificationCode}
                             </strong></p>
-                            <p>验证码将在30分钟后失效，请尽快使用。</p>
+                            <p>验证码将在10分钟后失效，请尽快使用。</p>
                             <hr style="border: 0; border-top: 1px solid #eee;">
                             <p style="color: #999; font-size: 12px;">此为系统邮件，请勿直接回复</p>
                         </div>

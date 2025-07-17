@@ -530,7 +530,7 @@
             用户授权登录
             </summary>
         </member>
-        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.#ctor(CoreCms.Net.Auth.Policys.PermissionRequirement,CoreCms.Net.IServices.ICoreCmsUserServices,CoreCms.Net.IServices.ISysUserServices,CoreCms.Net.IServices.ISysRoleMenuServices,Microsoft.AspNetCore.Http.IHttpContextAccessor,CoreCms.Net.IRepository.ISysLoginRecordRepository,CoreCms.Net.Utility.Helper.EmailSenderHelper)">
+        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.#ctor(CoreCms.Net.Auth.Policys.PermissionRequirement,CoreCms.Net.IServices.ICoreCmsUserServices,CoreCms.Net.IServices.ISysUserServices,CoreCms.Net.IServices.ISysRoleMenuServices,Microsoft.AspNetCore.Http.IHttpContextAccessor,CoreCms.Net.IRepository.ISysLoginRecordRepository,CoreCms.Net.Caching.AutoMate.RedisCache.IRedisOperationRepository,CoreCms.Net.Utility.Helper.EmailSenderHelper)">
             <summary>
             构造函数注入
             </summary>

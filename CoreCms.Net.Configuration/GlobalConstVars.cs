@@ -400,4 +400,10 @@
     }
 
 
+    public static class RedisCacheKey
+    {
+        public const string ForgetPasswordCacheKey = "ForgetPasswordValidCode_";
+
+    }
+
 }
