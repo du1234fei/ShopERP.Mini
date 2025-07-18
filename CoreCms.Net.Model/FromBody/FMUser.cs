@@ -152,14 +152,14 @@ namespace CoreCms.Net.Model.FromBody
 
         public string phone { get; set; }
 
-        public string userEmail { get; set; }
+        public string email { get; set; }
 
         public string passWord { get; set; }
 
         /// <summary>
         /// 验证码
         /// </summary>
-        public string VerifyCode { get; set; }
+        public string validCode { get; set; }
 
 
 

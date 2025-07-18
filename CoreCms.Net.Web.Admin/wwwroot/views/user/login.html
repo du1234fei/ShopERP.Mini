@@ -160,7 +160,7 @@
                 shadeClose: false,
                 title: '忘记密码',
                 area: ['430px', '500px'],
-                id: 'LAY-popup-CoreCmsUser-register',
+                id: 'LAY-popup-CoreCmsUser-ResetPassword',
                 success: function (layero, index) {
                     view(this.id).render('user/userInfo/forgetPassword', { data: 'forgetPassword' }).done(function () {
                         //监听提交
@@ -170,8 +170,13 @@
                                 var field = data.field; //获取提交的字段
                                 field.isDelete = field.isDelete == 'on';
 
+                                // 在公共文件中定义
+                                const API = {
+                                    RESET_PWD: "api/login/ResetPassword"
+                                };
+
                                 //提交 Ajax 成功后，关闭当前弹层并重载表格
-                                coreHelper.Post("api/login/DoResetPassword​​ ", field, function (e) {
+                                coreHelper.Post(API.RESET_PWD,field,function (e) {
                                     console.log(e)
                                     if (e.code === 0) {
 

@@ -1,5 +1,0 @@
-wwwroot\favicon.ico
-wwwroot\fonts\SourceHanSansK-Normal.ttf
-wwwroot\index.html
-wwwroot\robots.txt
-wwwroot\static\images\logo.png

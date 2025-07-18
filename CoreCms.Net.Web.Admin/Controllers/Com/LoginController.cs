@@ -349,7 +349,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
         /// </summary>
         /// <param name="email"></param>
         /// <param name="verificationCode"></param>
-        public async void SendVerificationEmailAsync(string email, string verificationCode)
+        private async void SendVerificationEmailAsync(string email, string verificationCode)
         {
             var message = new MailMessageModel()
             {
@@ -385,15 +385,14 @@ namespace CoreCms.Net.Web.Admin.Controllers
         #endregion
 
         #region 重置密码============================================================
-        // POST: api/login/DoResetPassword
+        // POST: api/login/ResetPassword
         /// <summary>
         /// 重置密码
         /// </summary>
         /// <param name="param"></param>
         /// <returns></returns>
         [HttpPost]
-        [Description("重置密码")]
-        public async Task<AdminUiCallBack> DoResetPassword([FromBody] FMSendResetPasswordPost param)
+        public async Task<AdminUiCallBack> ResetPassword([FromBody] FMSendResetPasswordPost param)
         {
             var jm = new AdminUiCallBack();
 
@@ -403,10 +402,10 @@ namespace CoreCms.Net.Web.Admin.Controllers
                 return jm;
             }
 
-            var isHave = await _sysUserServices.ExistsAsync(p => p.phone == param.phone);
-            if (isHave)
+            var entity = await _sysUserServices.QueryByClauseAsync(p => p.userName == param.userName&&p.email==param.email);
+            if (entity == null)
             {
-                jm.msg = "已存在此手机号码";
+                jm.msg = "用户工号与邮箱不匹配！";
                 return jm;
             }
 
@@ -415,24 +414,23 @@ namespace CoreCms.Net.Web.Admin.Controllers
 
             string dbVerifyCode=_redisOperationRepository.Get(strCacheKey).Result;
 
-            if (!dbVerifyCode.Equals(param.VerifyCode))
+            if (!dbVerifyCode.Equals(param.validCode))
             {
                 jm.msg = "验证码错误！";
                 return jm;
             }
 
-            SysUser entity = new SysUser();
             entity.userName = param.userName;
             entity.passWord = CommonHelper.Md5For32(param.passWord);
             entity.sex = 0;
             entity.phone = param.phone;
-            entity.email = param.userEmail;
+            entity.email = param.email;
             entity.createTime = DateTime.Now;
             entity.updateTime = DateTime.Now;
 
             var bl = await _sysUserServices.UpdateAsync(entity);
             jm.code = bl ? 0 : 1;
-            jm.msg = bl ? GlobalConstVars.CreateSuccess : GlobalConstVars.CreateFailure;
+            jm.msg = bl ? GlobalConstVars.OperSuccess : GlobalConstVars.OperFailure;
             return jm;
         }
 
