@@ -570,6 +570,13 @@
             <param name="email"></param>
             <param name="verificationCode"></param>
         </member>
+        <member name="M:CoreCms.Net.Web.Admin.Controllers.LoginController.DoResetPassword(CoreCms.Net.Model.FromBody.FMSendResetPasswordPost)">
+            <summary>
+            重置密码
+            </summary>
+            <param name="param"></param>
+            <returns></returns>
+        </member>
         <member name="T:CoreCms.Net.Web.Admin.Controllers.ToolsController">
             <summary>
                 后端常用方法

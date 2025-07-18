@@ -171,7 +171,7 @@
                                 field.isDelete = field.isDelete == 'on';
 
                                 //提交 Ajax 成功后，关闭当前弹层并重载表格
-                                coreHelper.Post("api/login/DoCreate", field, function (e) {
+                                coreHelper.Post("api/login/DoResetPassword​​ ", field, function (e) {
                                     console.log(e)
                                     if (e.code === 0) {
 
@@ -201,7 +201,6 @@
 
         //用户注册
         function doRegister() {
-
             admin.popup({
                 shadeClose: false,
                 title: '用户注册',

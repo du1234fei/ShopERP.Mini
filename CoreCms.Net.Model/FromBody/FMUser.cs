@@ -143,6 +143,28 @@ namespace CoreCms.Net.Model.FromBody
         public string userEmail { get; set; }
     }
 
+    /// <summary>
+    /// 重置密码请求报文
+    /// </summary>
+    public class FMSendResetPasswordPost
+    {
+        public string userName { get; set; }
+
+        public string phone { get; set; }
+
+        public string userEmail { get; set; }
+
+        public string passWord { get; set; }
+
+        /// <summary>
+        /// 验证码
+        /// </summary>
+        public string VerifyCode { get; set; }
+
+
+
+    }
+
 
 
 }

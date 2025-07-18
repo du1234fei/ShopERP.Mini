@@ -111,6 +111,16 @@
 
         public const string SendEmailFailure = "发送邮件失败！";
 
+        /// <summary>
+        ///操作成功
+        /// </summary>
+        public const string OperSuccess = "操作成功";
+        /// <summary>
+        ///操作失败
+        /// </summary>
+        public const string OperFailure = "操作失败";
+
+
         //缓存数据
         /// <summary>
         /// 缓存已经排序后台导航

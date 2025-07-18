@@ -384,5 +384,60 @@ namespace CoreCms.Net.Web.Admin.Controllers
 
         #endregion
 
+        #region 重置密码============================================================
+        // POST: api/login/DoResetPassword
+        /// <summary>
+        /// 重置密码
+        /// </summary>
+        /// <param name="param"></param>
+        /// <returns></returns>
+        [HttpPost]
+        [Description("重置密码")]
+        public async Task<AdminUiCallBack> DoResetPassword([FromBody] FMSendResetPasswordPost param)
+        {
+            var jm = new AdminUiCallBack();
+
+            if (string.IsNullOrEmpty(param.phone))
+            {
+                jm.msg = "请输入用户手机号";
+                return jm;
+            }
+
+            var isHave = await _sysUserServices.ExistsAsync(p => p.phone == param.phone);
+            if (isHave)
+            {
+                jm.msg = "已存在此手机号码";
+                return jm;
+            }
+
+            //验证验证码 是否与 账号一致
+            string strCacheKey = RedisCacheKey.ForgetPasswordCacheKey + param.userName;
+
+            string dbVerifyCode=_redisOperationRepository.Get(strCacheKey).Result;
+
+            if (!dbVerifyCode.Equals(param.VerifyCode))
+            {
+                jm.msg = "验证码错误！";
+                return jm;
+            }
+
+            SysUser entity = new SysUser();
+            entity.userName = param.userName;
+            entity.passWord = CommonHelper.Md5For32(param.passWord);
+            entity.sex = 0;
+            entity.phone = param.phone;
+            entity.email = param.userEmail;
+            entity.createTime = DateTime.Now;
+            entity.updateTime = DateTime.Now;
+
+            var bl = await _sysUserServices.UpdateAsync(entity);
+            jm.code = bl ? 0 : 1;
+            jm.msg = bl ? GlobalConstVars.CreateSuccess : GlobalConstVars.CreateFailure;
+            return jm;
+        }
+
+        #endregion
+
+
     }
 }
