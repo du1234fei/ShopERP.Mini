@@ -33,7 +33,7 @@ namespace CoreCms.Net.Web.Admin.Controllers
     /// 用户授权登录
     /// </summary>
     [Route("api/[controller]/[action]")]
-    [AllowAnonymous]
+    [AllowAnonymous]//跳过所有授权检查
     public class LoginController : ControllerBase
     {
         private readonly PermissionRequirement _permissionRequirement;
