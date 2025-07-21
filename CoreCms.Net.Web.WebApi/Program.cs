@@ -12,6 +12,7 @@ using CoreCms.Net.Mapping;
 using CoreCms.Net.Middlewares;
 using CoreCms.Net.Swagger;
 using CoreCms.Net.Task;
+using CoreCms.Net.Utility.Consul;
 using CoreCms.Net.Web.WebApi.Infrastructure;
 using Essensoft.Paylink.Alipay;
 using Essensoft.Paylink.WeChatPay;
@@ -66,10 +67,15 @@ namespace CoreCms.Net.Web.WebApi
 
             var app = builder.Build();
 
+            IConfiguration _configuration = builder.Configuration;
+
             app.ConfigureRequestPipeline();
 
             try
             {
+                //Consul 注册
+                app.UseConsul(_configuration);
+
                 //确保NLog.config中连接字符串与appsettings.json中同步
                 NLogUtil.EnsureNlogConfig("NLog.config");
 

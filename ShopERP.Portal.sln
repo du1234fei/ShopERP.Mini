@@ -7,9 +7,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "App", "App", "{9C52D39C-A85
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1.Core", "1.Core", "{B3F41F4C-3681-48F3-9BE3-809763AC1937}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCms.Net.Web.Admin", "CoreCms.Net.Web.Admin\CoreCms.Net.Web.Admin.csproj", "{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopERP.Admin", "CoreCms.Net.Web.Admin\ShopERP.Admin.csproj", "{95487EF2-3942-4F9B-8ECE-ACD7A4B304D9}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCms.Net.Web.WebApi", "CoreCms.Net.Web.WebApi\CoreCms.Net.Web.WebApi.csproj", "{CC504B7B-C4E1-4B0D-AAA8-E090E286F850}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShopERP.WebApi", "CoreCms.Net.Web.WebApi\ShopERP.WebApi.csproj", "{CC504B7B-C4E1-4B0D-AAA8-E090E286F850}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreCms.Net.Auth", "CoreCms.Net.Auth\CoreCms.Net.Auth.csproj", "{F776B535-7988-452B-AF14-5DC9B7D6E95D}"
 EndProject

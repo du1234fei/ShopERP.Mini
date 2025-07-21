@@ -14,6 +14,10 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
     <DocumentationFile></DocumentationFile>
   </PropertyGroup>
+  
+  <PropertyGroup>
+     <AssemblyName>ShopERP.Admin</AssemblyName> <!-- 控制输出DLL文件名 -->
+  </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="App_Data\**" />

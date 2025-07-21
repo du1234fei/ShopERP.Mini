@@ -17,6 +17,10 @@
     <DebugType>none</DebugType>
     <DebugSymbols>false</DebugSymbols>
   </PropertyGroup>
+  
+  <PropertyGroup>
+     <AssemblyName>ShopERP.WebApi</AssemblyName> <!-- 控制输出DLL文件名 -->
+  </PropertyGroup>
 
   <ItemGroup>
     <Compile Remove="App_Data\**" />

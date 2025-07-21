@@ -34,7 +34,7 @@ namespace CoreCms.Net.Utility.Consul
             ConsulClient client = new ConsulClient(c =>
             {
                 c.Address = new Uri(configuration["Consul:consulAddress"]);
-                c.Datacenter = "orderService";
+                c.Datacenter = "apiService";
             });
 
             string ip = configuration["ip"];//优先接收变量的值

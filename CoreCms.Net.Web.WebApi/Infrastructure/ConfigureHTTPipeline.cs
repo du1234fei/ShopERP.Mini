@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.HttpOverrides;
 using Microsoft.Extensions.Hosting;
 using System.Linq;
+using CoreCms.Net.Utility.Consul;
 
 namespace CoreCms.Net.Web.WebApi.Infrastructure
 {
@@ -128,6 +129,7 @@ namespace CoreCms.Net.Web.WebApi.Infrastructure
             defaultFilesOptions.DefaultFileNames.Add("index.html");
             app.UseDefaultFiles(defaultFilesOptions);
             app.UseStaticFiles();
+
         }
         #endregion
 

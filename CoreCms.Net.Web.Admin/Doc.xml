@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <doc>
     <assembly>
-        <name>CoreCms.Net.Web.Admin</name>
+        <name>ShopERP.Admin</name>
     </assembly>
     <members>
         <member name="T:CoreCms.Net.Web.Admin.Controllers.CoreCmsAdvertisementController">
