@@ -59,6 +59,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "5.MicroService", "5.MicroSe
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsulAndOcelot.ApiGateWay", "ConsulAndOcelot.ApiGateWay\ConsulAndOcelot.ApiGateWay.csproj", "{1262A559-1A8D-444D-B191-86A904770FCB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShopERP.Ocelot.ApiGateWay", "ShopERP.Ocelot.ApiGateWay\ShopERP.Ocelot.ApiGateWay.csproj", "{3C435058-1A99-4548-A217-93359E4869B9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -149,6 +151,10 @@ Global
 		{1262A559-1A8D-444D-B191-86A904770FCB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1262A559-1A8D-444D-B191-86A904770FCB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1262A559-1A8D-444D-B191-86A904770FCB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C435058-1A99-4548-A217-93359E4869B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C435058-1A99-4548-A217-93359E4869B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C435058-1A99-4548-A217-93359E4869B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C435058-1A99-4548-A217-93359E4869B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -175,6 +181,7 @@ Global
 		{7043B7B2-6496-4FCB-A230-1EBC5E11B91C} = {B3F41F4C-3681-48F3-9BE3-809763AC1937}
 		{927E68B4-92D1-4F66-B137-87804055DE93} = {B3F41F4C-3681-48F3-9BE3-809763AC1937}
 		{1262A559-1A8D-444D-B191-86A904770FCB} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{3C435058-1A99-4548-A217-93359E4869B9} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {A325D634-06E7-4F4E-BA15-AB3E14622FF1}
