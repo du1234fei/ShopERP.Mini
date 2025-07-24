@@ -1,6 +1,7 @@
 
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
+using ShopERP.Ocelot.ApiGateWay.Infrastructure;
 
 namespace ShopERP.Ocelot.ApiGateWay
 {
@@ -18,6 +19,9 @@ namespace ShopERP.Ocelot.ApiGateWay
 
             //使用 Ocelot 接管代码
             builder.Services.AddOcelot(builder.Configuration);
+
+            //将 服务发现，注册到容器中
+            builder.Services.AddTransient<ConsulServiceDiscover>();
 
             var app = builder.Build();
 
