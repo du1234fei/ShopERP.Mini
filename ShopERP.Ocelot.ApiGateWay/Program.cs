@@ -38,7 +38,7 @@ namespace ShopERP.Ocelot.ApiGateWay
 
             app.UseRouting();
 
-            //配置双路由： API 走 Ocelot ，其他请求正常走 .NET8 流程
+            //配置双路由： API (/T1) 走 Ocelot ，其他请求正常走 .NET8 流程
             app.MapWhen(context=>context.Request.Path.StartsWithSegments("/T1"),
                 subApp=>subApp.UseOcelot().GetAwaiter().GetResult());
 
