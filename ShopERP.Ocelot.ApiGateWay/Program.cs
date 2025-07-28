@@ -14,14 +14,14 @@ namespace ShopERP.Ocelot.ApiGateWay
             // Add services to the container.
             builder.Services.AddControllersWithViews();
 
+            //将 服务发现，注册到容器中
+            builder.Services.AddTransient<ConsulServiceDiscover>();
+
             ////添加 Ocelot 并添加配置文件
             builder.Configuration.AddJsonFile("ocelot.json", optional: true, reloadOnChange: true);
 
             //使用 Ocelot 接管代码
             builder.Services.AddOcelot(builder.Configuration);
-
-            //将 服务发现，注册到容器中
-            builder.Services.AddTransient<ConsulServiceDiscover>();
 
             var app = builder.Build();
 
